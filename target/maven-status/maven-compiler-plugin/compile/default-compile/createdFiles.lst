@@ -1,0 +1,8 @@
+servlets\SignUpServlet.class
+repositories\UsersRepositoryInMemoryImpl.class
+filters\AuthFilter.class
+servlets\LoginServlet.class
+fake\FakeStorage.class
+models\User.class
+repositories\UsersRepository.class
+servlets\HomeServlet.class
