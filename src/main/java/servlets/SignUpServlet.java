@@ -36,13 +36,18 @@ public class SignUpServlet extends HttpServlet {
         // вытащили данные регистрации
         String name = req.getParameter("name");
         String password = req.getParameter("password");
+        String repassword = req.getParameter("repassword");
         String email = req.getParameter("email");
+
+
         // создали пользователя и сохранили его в хранилище
-        User user = new User(name, password, email);
+        User user = new User(name, password,email);
         usersRepository.save(user);
         //после регистрации оставляем пользователя на этой же странице
 //        doGet(req, resp);
         req.getRequestDispatcher("jsp/signup.jsp").forward(req, resp);
+
+
 
     }
 }

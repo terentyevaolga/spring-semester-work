@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="itiis-mentor" />
+        <module name="jsp-examples" />
       </profile>
     </annotationProcessing>
   </component>

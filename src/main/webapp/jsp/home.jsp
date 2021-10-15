@@ -6,14 +6,7 @@
 <body>
 
 <form method="post" action="/home" >
-    <label for="color">
-        <select name="color" id="color">
-            <option value="red">Красный</option>
-            <option value="yellow">Желтый</option>
-            <option value="black">Черный</option>
-        </select>
-    </label>
-    <input type="submit" value="Color send">
+    <h3>Вы попали на страницу, доступную только зарегистрированному пользователю!</h3>
 </form>
 
 </body>

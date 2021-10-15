@@ -1,8 +1,8 @@
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\filters\AuthFilter.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\repositories\UsersRepository.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\models\User.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\repositories\UsersRepositoryInMemoryImpl.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\servlets\SignUpServlet.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\fake\FakeStorage.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\servlets\HomeServlet.java
-C:\Users\Ольга\IdeaProjects\itiis-mentor\src\main\java\servlets\LoginServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\repositories\UsersRepositoryInMemoryImpl.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\fake\FakeStorage.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\filters\AuthFilter.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\repositories\UsersRepository.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\servlets\LoginServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\servlets\SignUpServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\servlets\HomeServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-sem-work\src\main\java\models\User.java

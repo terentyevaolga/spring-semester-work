@@ -20,23 +20,5 @@
         <input type="submit" value="Sign Up">
     </form>
 </div>
-
-<div class="form-style-5">
-    <div class="form-style-5-heading">
-        Already registered!
-    </div>
-    <table>
-        <tr>
-            <th>User name</th>
-            <th>Email</th>
-        </tr>
-        <c:forEach items="${usersFromServer}" var="user">
-            <tr>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-            </tr>
-        </c:forEach>
-    </table>
-</div>
 </body>
 </html>
