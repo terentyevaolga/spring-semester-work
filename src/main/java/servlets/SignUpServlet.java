@@ -1,6 +1,6 @@
 package servlets;
 
-import form.SignUpForm;
+import forms.SignUpForm;
 import repositories.UsersRepository;
 import repositories.UsersRepositoryImpl;
 import services.UserService;
@@ -26,7 +26,8 @@ public class SignUpServlet extends HttpServlet {
     private final String DB_PASSWORD = "aser4321";
 
     @Override
-    public void init() throws ServletException {;
+    public void init() throws ServletException {
+        ;
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);

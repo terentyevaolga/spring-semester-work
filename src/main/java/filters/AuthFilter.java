@@ -18,17 +18,15 @@ public class AuthFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
         // выполняем преобразование Servlet-запросов-ответов в HTTP-запросы-ответы
-        HttpServletRequest request = (HttpServletRequest)servletRequest;
-        HttpServletResponse response = (HttpServletResponse)servletResponse;
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-        // смотрим, есть ли сессия для данного запроса (проверяется наличие Cookie с названием JSESSIONID
+        // смотрим, есть ли сессия для данного запроса
         HttpSession session = request.getSession(false);
 
-        // если сессия не была, или у сессии отсутствует атрибут user, перенаправляем пользователя на страницу с логином
         if (session == null || session.getAttribute("user") == null) {
             servletRequest.getServletContext().getRequestDispatcher("/signin").forward(request, response);
         }
-        // отдаем запрос дальше в цепочку фильтров
         chain.doFilter(request, response);
     }
 

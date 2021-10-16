@@ -1,7 +1,7 @@
 package services;
 
-import form.SignInForm;
-import form.SignUpForm;
+import forms.SignInForm;
+import forms.SignUpForm;
 import models.User;
 
 import javax.servlet.http.Cookie;

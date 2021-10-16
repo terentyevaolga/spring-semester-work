@@ -1,14 +1,14 @@
 servlets\SignUpServlet.class
 filters\AuthFilter.class
+forms\SignInForm.class
 services\UserService.class
 services\UserServiceImpl.class
 servlets\LoginServlet.class
 repositories\AuthRepositoryImpl.class
+forms\SignUpForm.class
 models\User.class
 models\Auth.class
-form\SignUpForm.class
 servlets\HomeServlet.class
-form\SignInForm.class
 repositories\AuthRepository.class
 repositories\UsersRepository.class
 repositories\UsersRepositoryImpl.class

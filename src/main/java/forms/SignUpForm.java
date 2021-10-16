@@ -1,4 +1,4 @@
-package form;
+package forms;
 
 public class SignUpForm {
     private String name;

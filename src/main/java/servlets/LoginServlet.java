@@ -1,6 +1,6 @@
 package servlets;
 
-import form.SignInForm;
+import forms.SignInForm;
 import repositories.AuthRepository;
 import repositories.AuthRepositoryImpl;
 import repositories.UsersRepository;
@@ -59,7 +59,6 @@ public class LoginServlet extends HttpServlet {
         } else {
             req.getRequestDispatcher("/jsp/signin.jsp").forward(req, resp);
         }
-
 
 
     }
