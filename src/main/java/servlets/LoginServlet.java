@@ -1,25 +1,42 @@
 package servlets;
 
+import form.SignInForm;
+import repositories.AuthRepository;
+import repositories.AuthRepositoryImpl;
 import repositories.UsersRepository;
-import repositories.UsersRepositoryInMemoryImpl;
+import repositories.UsersRepositoryImpl;
+import services.UserService;
+import services.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 @WebServlet("/signin")
 public class LoginServlet extends HttpServlet {
 
-    // ссылка на хранилище пользователей
-    private UsersRepository usersRepository;
+    private UserService userService;
+
+    private final String DB_URL = "jdbc:postgresql://localhost:5432/DBsemester";
+    private final String DB_USERNAME = "postgres";
+    private final String DB_PASSWORD = "aser4321";
 
     @Override
     public void init() throws ServletException {
-        this.usersRepository = new UsersRepositoryInMemoryImpl();
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+
+            UsersRepository usersRepository = new UsersRepositoryImpl(connection);
+            AuthRepository authRepository = new AuthRepositoryImpl(connection);
+            userService = new UserServiceImpl(usersRepository, authRepository);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new IllegalStateException(e);
+        }
     }
 
     @Override
@@ -33,17 +50,17 @@ public class LoginServlet extends HttpServlet {
         String name = req.getParameter("name");
         String password = req.getParameter("password");
 
-        // если пользователь есть в системе
-        if (usersRepository.isExist(name, password)) {
-            // создаем для него сессию
-            HttpSession session = req.getSession();
-            // кладем в атрибуты сессии атрибут user с именем пользователя
-            session.setAttribute("user", name);
-            // перенаправляем на страницу home
-            req.getServletContext().getRequestDispatcher("/home").forward(req, resp);
+        SignInForm signInForm = new SignInForm(name, password);
+        Cookie cookie = userService.signin(signInForm);
+
+        if (cookie != null) {
+            resp.addCookie(cookie);
+            req.getRequestDispatcher("/jsp/home.jsp").forward(req, resp);
         } else {
-            resp.sendRedirect(req.getContextPath() + "/signin");
+            req.getRequestDispatcher("/jsp/signin.jsp").forward(req, resp);
         }
+
+
 
     }
 }

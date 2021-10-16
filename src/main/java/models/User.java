@@ -1,14 +1,17 @@
 package models;
 
 public class User {
+    private Long id;
     private String name;
-    private String password;
+    private String passwordHash;
     private String email;
 
-    public User(String name, String password, String email) {
-        this.name = name;
-        this.password = password;
-        this.email = email;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -19,16 +22,16 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {

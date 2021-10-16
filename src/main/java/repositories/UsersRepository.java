@@ -3,11 +3,12 @@ package repositories;
 import models.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UsersRepository {
     List<User> findAll();
-    void save(User user);
-    //существует ли пользоватедь с таким именем и с таким паролем
-    boolean isExist(String name, String password);
-
+    Optional<User> findById(Long id);
+    User save(User user);
+    void deleteById(Long id);
+    User findByName(String name);
 }

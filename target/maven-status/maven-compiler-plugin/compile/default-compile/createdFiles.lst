@@ -1,8 +1,14 @@
 servlets\SignUpServlet.class
-repositories\UsersRepositoryInMemoryImpl.class
 filters\AuthFilter.class
+services\UserService.class
+services\UserServiceImpl.class
 servlets\LoginServlet.class
-fake\FakeStorage.class
+repositories\AuthRepositoryImpl.class
 models\User.class
-repositories\UsersRepository.class
+models\Auth.class
+form\SignUpForm.class
 servlets\HomeServlet.class
+form\SignInForm.class
+repositories\AuthRepository.class
+repositories\UsersRepository.class
+repositories\UsersRepositoryImpl.class
