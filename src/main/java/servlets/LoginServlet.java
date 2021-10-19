@@ -8,6 +8,7 @@ import repositories.UsersRepositoryImpl;
 import services.UserService;
 import services.UserServiceImpl;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -16,7 +17,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebServlet("/signin")
+@WebServlet(urlPatterns = "/signin")
 public class LoginServlet extends HttpServlet {
 
     private UserService userService;
@@ -41,7 +42,9 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/jsp/signin.jsp").forward(req, resp);
+        RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/jsp/signin.jsp");
+        dispatcher.forward(req, resp);
+       // req.getRequestDispatcher("/jsp/signin.jsp").forward(req, resp);
     }
 
     @Override
