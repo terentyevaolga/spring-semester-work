@@ -1,6 +1,8 @@
 servlets\SignUpServlet.class
 filters\AuthFilter.class
+forms\SendReviewForm.class
 forms\SignInForm.class
+servlets\SendReviewServlet.class
 services\UserService.class
 services\UserServiceImpl.class
 servlets\LoginServlet.class
@@ -11,4 +13,5 @@ models\Auth.class
 servlets\HomeServlet.class
 repositories\AuthRepository.class
 repositories\UsersRepository.class
+models\Review.class
 repositories\UsersRepositoryImpl.class

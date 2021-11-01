@@ -1,5 +1,6 @@
 package repositories;
 
+import models.Review;
 import models.User;
 
 import java.util.List;
@@ -11,4 +12,5 @@ public interface UsersRepository {
     User save(User user);
     void deleteById(Long id);
     User findByName(String name);
+    Review save(Review review);
 }

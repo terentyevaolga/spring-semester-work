@@ -1,5 +1,6 @@
 package repositories;
 
+import models.Review;
 import models.User;
 
 import java.sql.*;
@@ -12,6 +13,7 @@ public class UsersRepositoryImpl implements UsersRepository {
 
     private final String INSERT_INTO_USERDATA = "insert into userdata(name, email, passwordHash) values(?, ?, ?)";
     private final String FIND_USER_BY_NAME = "select * from userdata where name=?;";
+    private final String INSERT_INTO_REVIEWS_ABOUT_SITE = "insert into reviews_about_site(userName, userEmail, reviewText) values (?, ?, ?)";
 
     public UsersRepositoryImpl(Connection connection) {
         this.connection = connection;
@@ -53,6 +55,30 @@ public class UsersRepositoryImpl implements UsersRepository {
     }
 
     @Override
+    public Review save(Review review) {
+        ResultSet resultSet = null;
+
+        PreparedStatement preparedStatement = null;
+
+        try {
+            preparedStatement = connection.prepareStatement(INSERT_INTO_REVIEWS_ABOUT_SITE, Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setString(1, review.getUserName());
+            preparedStatement.setString(2, review.getUserEmail());
+            preparedStatement.setString(3, review.getUserReviewText());
+
+            resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()) {
+                review.setId(resultSet.getLong("id"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return review;
+    }
+
+    @Override
     public void deleteById(Long id) {
     }
 
@@ -78,4 +104,5 @@ public class UsersRepositoryImpl implements UsersRepository {
         }
         return user;
     }
+
 }

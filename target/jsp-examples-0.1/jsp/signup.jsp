@@ -18,7 +18,7 @@
         <label for="password">Пароль
             <input class="input input-field password" type="password" id="password" name="password">
         </label>
-        <input type="submit" value="Зарегестрироваться" class="btn">
+        <input type="submit" value="Регистрация" class="btn">
     </form>
 </div>
 

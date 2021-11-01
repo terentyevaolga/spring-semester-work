@@ -1,7 +1,9 @@
 package services;
 
+import forms.SendReviewForm;
 import forms.SignInForm;
 import forms.SignUpForm;
+import models.Review;
 import models.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -54,9 +56,18 @@ public class UserServiceImpl implements UserService {
                 cookie.setMaxAge(10 * 60 * 60);
                 return cookie;
             }
-
         }
         return null;
+    }
+
+    @Override
+    public Review sendReview(SendReviewForm sendReviewForm) {
+        Review review = new Review();
+        review.setUserName(sendReviewForm.getName());
+        review.setUserEmail(sendReviewForm.getEmail());
+        review.setUserReviewText(sendReviewForm.getReviewText());
+
+        return usersRepository.save(review);
     }
 }
 

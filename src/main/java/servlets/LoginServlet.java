@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
 
         if (cookie != null) {
             resp.addCookie(cookie);
-            req.getRequestDispatcher("/jsp/home.jsp").forward(req, resp);
+            req.getRequestDispatcher("/jsp/review.jsp").forward(req, resp);
         } else {
             req.getRequestDispatcher("/jsp/signin.jsp").forward(req, resp);
         }

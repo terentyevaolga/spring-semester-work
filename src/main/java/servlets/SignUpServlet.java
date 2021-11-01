@@ -27,7 +27,6 @@ public class SignUpServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        ;
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
@@ -55,7 +54,7 @@ public class SignUpServlet extends HttpServlet {
         usersService.signup(signUpForm);
 
 //        req.getRequestDispatcher("/jsp/signup.jsp").forward(req, resp);
-        req.getRequestDispatcher("/layout/profile.html").forward(req, resp);
-
+        req.getRequestDispatcher("/jsp/review.jsp").forward(req, resp);
     }
+
 }
