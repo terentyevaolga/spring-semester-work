@@ -8,7 +8,9 @@ C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\Sign
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\AuthFilter.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\UsersRepository.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\SendReviewServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\CheckParametersFilter.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\HomeServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\helper\CheckParametersHelper.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Auth.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SignUpForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SendReviewForm.java

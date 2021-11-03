@@ -1,7 +1,9 @@
 servlets\SignUpServlet.class
 filters\AuthFilter.class
+filters\CheckParametersFilter.class
 forms\SendReviewForm.class
 forms\SignInForm.class
+helper\CheckParametersHelper.class
 servlets\SendReviewServlet.class
 services\UserService.class
 services\UserServiceImpl.class

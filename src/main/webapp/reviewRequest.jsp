@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,7 @@
     <title>Контакты</title>
     <meta name="description" content = "Киномонстр - это портал о кино" />
     <meta name="keywords" content = "фильмы, фильмы онлайн, hd" />
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css"></head>
 
 <body>
 <div class="main">
@@ -24,11 +23,11 @@
 
         <div class="menubar">
             <ul class="menu">
-                <li><a href = "../index.html">Главная</a></li>
-                <li><a href = "films.html">Фильмы</a></li>
-                <li><a href = "serials.html">Сериалы</a></li>
-                <li><a href = "rating.html">Рейтинг фильмов/сериалов</a></li>
-                <li class="selected"><a href = "contact.html">Контакты</a></li>
+                <li><a href = "index.jsp">Главная</a></li>
+                <li><a href = "films.jsp">Фильмы</a></li>
+                <li><a href = "serials.jsp">Сериалы</a></li>
+                <li><a href = "rating.jsp">Рейтинг фильмов/сериалов</a></li>
+                <li class="selected"><a href = "contact.jsp">Контакты</a></li>
             </ul>
 
         </div>
@@ -79,51 +78,51 @@
         <div class="content">
             <p>Для отправки отзыва о портале КиноМонстр Вам необходимо войти в систему</p>
 
-            <div class="button"><a href="/jsp/signin.jsp">Вход</a></div>
-            <div class="button"><a href="/jsp/signup.jsp">Регистрация</a></div>
+            <div class="button"><a href="signin.jsp">Вход</a></div>
+            <div class="button"><a href="signup.jsp">Регистрация</a></div>
 
-<!--            <div class="signButtons">-->
+            <!--            <div class="signButtons">-->
 
-<!--                <div class="signUp">-->
-<!--                    <div class="button">-->
-<!--                        <a href="#" id="open_pop_up">Регистрация</a>-->
-<!--                    </div>-->
-<!--                    <div class="pop_up" id="pop_up">-->
-<!--                        <div class="pop_up_container">-->
-<!--                            <div class="pop_up_body" id="pop_up_body">-->
-<!--                                <p>КиноМонстр</p>-->
-<!--                                <form action="">-->
-<!--                                    <input type="text" placeholder="Логин">-->
-<!--                                    <input type="text" placeholder="Электронная почта">-->
-<!--                                    <input type="password" placeholder="Пароль">-->
-<!--                                    <button>Регистрация</button>-->
-<!--                                </form>-->
-<!--                                <div class="pop_up_close" id="pop_up_close">&#10006</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+            <!--                <div class="signUp">-->
+            <!--                    <div class="button">-->
+            <!--                        <a href="#" id="open_pop_up">Регистрация</a>-->
+            <!--                    </div>-->
+            <!--                    <div class="pop_up" id="pop_up">-->
+            <!--                        <div class="pop_up_container">-->
+            <!--                            <div class="pop_up_body" id="pop_up_body">-->
+            <!--                                <p>КиноМонстр</p>-->
+            <!--                                <form action="">-->
+            <!--                                    <input type="text" placeholder="Логин">-->
+            <!--                                    <input type="text" placeholder="Электронная почта">-->
+            <!--                                    <input type="password" placeholder="Пароль">-->
+            <!--                                    <button>Регистрация</button>-->
+            <!--                                </form>-->
+            <!--                                <div class="pop_up_close" id="pop_up_close">&#10006</div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
 
-<!--               <div class="signIn">-->
-<!--                   <div class="button">-->
-<!--                       <a href="#" id="open_pop_in">Вход</a>-->
-<!--                   </div>-->
-<!--                   <div class="pop_up" id="pop_in">-->
-<!--                       <div class="pop_up_container">-->
-<!--                           <div class="pop_up_body" id="pop_in_body">-->
-<!--                               <p>КиноМонстр</p>-->
-<!--                               <form action="">-->
-<!--                                   <input type="text" placeholder="Логин">-->
-<!--                                   <input type="password" placeholder="Пароль">-->
-<!--                                   <button>Вход</button>-->
-<!--                               </form>-->
-<!--                               <div class="pop_up_close" id="pop_in_close">&#10006</div>-->
-<!--                           </div>-->
-<!--                       </div>-->
-<!--                   </div>-->
-<!--               </div>-->
+            <!--               <div class="signIn">-->
+            <!--                   <div class="button">-->
+            <!--                       <a href="#" id="open_pop_in">Вход</a>-->
+            <!--                   </div>-->
+            <!--                   <div class="pop_up" id="pop_in">-->
+            <!--                       <div class="pop_up_container">-->
+            <!--                           <div class="pop_up_body" id="pop_in_body">-->
+            <!--                               <p>КиноМонстр</p>-->
+            <!--                               <form action="">-->
+            <!--                                   <input type="text" placeholder="Логин">-->
+            <!--                                   <input type="password" placeholder="Пароль">-->
+            <!--                                   <button>Вход</button>-->
+            <!--                               </form>-->
+            <!--                               <div class="pop_up_close" id="pop_in_close">&#10006</div>-->
+            <!--                           </div>-->
+            <!--                       </div>-->
+            <!--                   </div>-->
+            <!--               </div>-->
 
-<!--            </div>-->
+            <!--            </div>-->
 
 
         </div>

@@ -10,11 +10,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
     padding: 10px 20px;
     background: #f4f7f8;
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-style-5 h2 {
+    color: darkslateblue;
 }
 
 form {
@@ -32,6 +37,7 @@ label {
     padding: 0 10px;
     border: 1px solid #ccc;
     outline: 0;
+    margin: 6px auto;
 }
 
 textarea {
@@ -67,7 +73,7 @@ textarea.error {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1e335e;
+    background-color: #7268ad;
     border: 0;
     width: 100%;
     outline: 0;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +6,9 @@
     <title>Сериалы</title>
     <meta name="description" content = "Киномонстр - это портал о кино" />
     <meta name="keywords" content = "фильмы, фильмы онлайн, hd" />
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css">
 
+</head>
 <body>
 <div class="main">
     <div class="header">
@@ -24,11 +24,11 @@
 
         <div class="menubar">
             <ul class="menu">
-                <li><a href = "../index.html">Главная</a></li>
-                <li><a href = "films.html">Фильмы</a></li>
-                <li class="selected"><a href = "serials.html">Сериалы</a></li>
-                <li><a href = "rating.html">Рейтинг фильмов/сериалов</a></li>
-                <li><a href = "contact.html">Контакты</a></li>
+                <li><a href = "index.jsp">Главная</a></li>
+                <li><a href = "films.jsp">Фильмы</a></li>
+                <li class="selected"><a href = "serials.jspl">Сериалы</a></li>
+                <li><a href = "rating.jsp">Рейтинг фильмов/сериалов</a></li>
+                <li><a href = "contact.jsp">Контакты</a></li>
             </ul>
 
         </div>
