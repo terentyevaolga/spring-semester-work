@@ -1,10 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/slider.css">
+    <title>Главная</title>
 
+</head>
 <body>
 <div class="main">
     <header class="header">
@@ -25,7 +26,6 @@
                 <li><a href = "rating.jsp">Рейтинг фильмов/сериалов</a></li>
                 <li><a href = "contact.jsp">Контакты</a></li>
             </ul>
-
         </div>
     </header>
 
@@ -71,23 +71,36 @@
 
         </div>
 
+        <!-- делаем слайдер  -->
         <div class="content">
             <h1>Новые фильмы</h1>
             <div class="films_block">
-                <a href="#"><img src="layout/assets/img/films/matrix.png"></a>
-                <a href="#"><img src="layout/assets/img/films/max.png"></a>
-                <a href="#"><img src="layout/assets/img/films/inter.png"></a>
-                <a href="#"><img src="layout/assets/img/films/cloud.png"></a>
-
+                <button class="slider-prev"><img src="img/white-arrow-left.svg" alt="стрелка"></button>
+                <div class="slider-container">
+                    <div class="slider-films">
+                        <img src="img/films/matrix.png" alt="ideas">
+                        <img src="img/films/max.png" alt="plisov">
+                        <img src="img/films/inter.png" alt="theories">
+                        <img src="img/films/cloud.png" alt="stiven">
+                        <img src="img/serials/dead.png" alt="cat">
+                    </div>
+                </div>
+                <button class="slider-next"><img src="img/white-arrow-right.svg" alt="стрелка"></button>
             </div>
 
             <h1>Новые сериалы</h1>
             <div class="films_block">
-                <a href="#"><img src="layout/assets/img/serials/dead.png"></a>
-                <a href="#"><img src="layout/assets/img/serials/silicon.png"></a>
-                <a href="#"><img src="layout/assets/img/serials/breakingbad.png"></a>
-                <a href="#"><img src="layout/assets/img/serials/xfiles.png"></a>
-
+                <button class="slider-back"><img src="img/white-arrow-left.svg" alt="стрелка"></button>
+                <div class="slider-container">
+                    <div class="slider-serials">
+                        <img src="img/serials/dead.png" alt="ideas">
+                        <img src="img/serials/silicon.png" alt="plisov">
+                        <img src="img/serials/breakingbad.png" alt="theories">
+                        <img src="img/serials/xfiles.png" alt="stiven">
+                        <img src="img/films/cloud.png" alt="cat">
+                    </div>
+                </div>
+                <button class="slider-forward"><img src="img/white-arrow-right.svg" alt="стрелка"></button>
             </div>
 
             <div class="posts">
@@ -99,7 +112,7 @@
 
                 <div class="posts_content">
                     <p>
-                        <%--                        Работавшие над «Интерстелларом» отмечали фанатичный энтузиазм режиссер Кристофер Нолана. Он ничего не делал вполсилы и умел заразить своим рвением других. Джессика Честейн, сыгравшая дочку главного героя-летчика, например, вспоминала, что во время съемок у нее было чувство, что просто очень не хочется расстраивать Нолана, потому она не могла позволить себе капризничать или отказываться от какой-то работы.--%>
+                        Работавшие над «Интерстелларом» отмечали фанатичный энтузиазм режиссер Кристофер Нолана. Он ничего не делал вполсилы и умел заразить своим рвением других. Джессика Честейн, сыгравшая дочку главного героя-летчика, например, вспоминала, что во время съемок у нее было чувство, что просто очень не хочется расстраивать Нолана, потому она не могла позволить себе капризничать или отказываться от какой-то работы.
                     </p>
                 </div>
                 <p><a href="/layout/interstellarText.html">читать</a></p>
@@ -122,7 +135,7 @@
 
     <footer class="footer">
         <p>
-            <a href="index.html">Главная</a> |
+            <a href="page.html">Главная</a> |
             <a href="layout/films.html">Фильмы</a> |
             <a href="layout/serials.html">Сериалы</a> |
             <a href="layout/rating.html">Рейтинг фильмов</a> |
@@ -133,9 +146,6 @@
 
 </div>
 
-
-<script src="layout/libs/jquery/jquery.js"></script>
-<script src="layout/js/main.js"></script>
-
+<script src="javascript/slider.js"></script>
 </body>
 </html>

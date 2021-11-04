@@ -7,6 +7,7 @@
 </head>
 <body>
 <div class="form-style-5">
+    <h2>КиноМонстр</h2>
     <form class="signin-form" method="post" action="/signin">
         <input class="input input-field name" type="text" id="name" name="name" placeholder="Логин">
         <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль">

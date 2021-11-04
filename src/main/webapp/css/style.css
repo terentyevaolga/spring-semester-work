@@ -14,6 +14,7 @@ body {
 	color: #555;
 	width: 100%;
 	max-width: 100%;
+	min-width: 1200px;
 }
 
 p {
@@ -66,7 +67,6 @@ ul li {
 	font-size: 0.8em;
 	margin-left: 0px;
 	margin-right: 0px;
-	min-width: 900px;
 }
 
 .main, .logo, .menubar, .site_content, .footer, .sign-button {
@@ -228,12 +228,29 @@ html .signin, .signup {
 
 .films_block {
 	margin-bottom: 5%;
+	/**/
+	display: flex;
+	padding: 0 20px;
 }
 
-.films_block img {
+/* .films_block -> .slide */
+.slide img {
+	height: 100%;
 	border-radius: 5px;
 	border: solid 5px #dad7d5;
-	width: 22%;
+	width: 100%;
+	/**/
+	cursor: pointer;
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	transition: all 500ms ease-in-out;
+}
+/**/
+.slide.active {
+	flex: 10;
 }
 
 .posts .posts_content {
