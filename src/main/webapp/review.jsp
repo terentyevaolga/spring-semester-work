@@ -13,7 +13,7 @@
 <%--            <input class="input input-field name" id="name" type="text" name="name" placeholder="Ваше имя">--%>
 <%--            <input class="input input-field email" id="email" type="email" name="email" placeholder="Ваш email">--%>
             <input class="input input-field phone" id="phone" type="text" name="phone" placeholder="+7 (___) __ - __ - __">
-            <input class="input input-field text" name="comment" placeholder=". . .">
+            <input class="input input-field text" id="comment" name="comment" placeholder=". . .">
             <input type="submit" value="Отправить отзыв" class="btn">
 
             <div class="button"><a href="index.jsp">Вернуться на главную</a></div>

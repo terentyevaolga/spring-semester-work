@@ -18,7 +18,7 @@
     <div class="menubar">
         <ul class="menu">
             <li><a href = "index.jsp">Главная</a></li>
-            <li><a href = "films.jsp">Фильмы</a></li>
+            <li><a href = "/films">Фильмы</a></li>
             <li><a href = "serials.jsp">Сериалы</a></li>
             <li><a href = "rating.jsp">Рейтинг фильмов/сериалов</a></li>
             <li><a href = "contact.jsp">Контакты</a></li>

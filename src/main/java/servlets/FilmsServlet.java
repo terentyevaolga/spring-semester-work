@@ -1,15 +1,10 @@
 package servlets;
 
-import forms.SendReviewForm;
-import repositories.AuthRepository;
-import repositories.AuthRepositoryImpl;
-import repositories.UsersRepository;
-import repositories.UsersRepositoryImpl;
+import models.Film;
+import repositories.*;
 import services.UserService;
 import services.UserServiceImpl;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,11 +14,12 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
-@WebServlet("/sendReview")
-public class SendReviewServlet extends HttpServlet {
+@WebServlet("/films")
+public class FilmsServlet extends HttpServlet {
 
-    private UserService userService;
+    private FilmsRepository filmsRepository;
 
     private final String DB_URL = "jdbc:postgresql://localhost:5432/DBsemester";
     private final String DB_USERNAME = "postgres";
@@ -34,27 +30,23 @@ public class SendReviewServlet extends HttpServlet {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-
-            UsersRepository usersRepository = new UsersRepositoryImpl(connection);
-            userService = new UserServiceImpl(usersRepository);
+            filmsRepository = new FilmsRepositoryImpl(connection);
         } catch (SQLException | ClassNotFoundException e) {
             throw new IllegalStateException(e);
         }
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("review.jsp").forward(request, response);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<Film> films = filmsRepository.findAll();
+        req.setAttribute("films", films);
+        req.getRequestDispatcher("films.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-        SendReviewForm sendReviewForm = new SendReviewForm();
-        sendReviewForm.setPhone(req.getParameter("phone"));
-        sendReviewForm.setReviewText(req.getParameter("comment"));
-
-        userService.sendReview(sendReviewForm);
-        req.getRequestDispatcher("review.jsp").forward(req, resp);
+        resp.sendRedirect("/show_film");
     }
+
+
 }

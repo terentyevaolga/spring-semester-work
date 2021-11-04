@@ -1,4 +1,5 @@
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\services\UserService.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\ShowFilmServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Review.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\AuthRepositoryImpl.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\services\UserServiceImpl.java
@@ -6,7 +7,10 @@ C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\S
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\UsersRepositoryImpl.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SignInForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\AuthFilter.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\FilmsRepository.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\UsersRepository.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\FilmsServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\FilmsRepositoryImpl.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\SendReviewServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\CheckParametersFilter.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\HomeServlet.java
@@ -15,5 +19,6 @@ C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Aut
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SignUpForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SendReviewForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\User.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Film.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\AuthRepository.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\LoginServlet.java

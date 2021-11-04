@@ -11,9 +11,14 @@ servlets\LoginServlet.class
 repositories\AuthRepositoryImpl.class
 forms\SignUpForm.class
 models\User.class
+servlets\FilmsServlet.class
 models\Auth.class
 servlets\HomeServlet.class
+servlets\ShowFilmServlet.class
+repositories\FilmsRepository.class
 repositories\AuthRepository.class
 repositories\UsersRepository.class
+repositories\FilmsRepositoryImpl.class
+models\Film.class
 models\Review.class
 repositories\UsersRepositoryImpl.class
