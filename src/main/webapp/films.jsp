@@ -9,27 +9,9 @@
 
 <body>
 <div class="main">
-    <div class="header">
-        <div class="logo-signButton-flex">
-            <div class="logo">
-                <div class="logo_text">
-                    <h1><a href = "/">КиноМонстр</a></h1>
-                    <h2>Кино - наша страсть!</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="menubar">
-            <ul class="menu">
-                <li><a href = "index.jsp">Главная</a></li>
-                <li class="selected"><a href = "films.jsp">Фильмы</a></li>
-                <li><a href = "serials.jsp">Сериалы</a></li>
-                <li><a href = "rating.jsp">Рейтинг фильмов/сериалов</a></li>
-                <li><a href = "contact.jsp">Контакты</a></li>
-            </ul>
-        </div>
-
-    </div>
+    <header>
+        <jsp:include page="header.jsp"/>
+    </header>
 
     <div class="site_content">
 
@@ -105,17 +87,9 @@
 
     </div>
 
-    <div class="footer">
-        <p>
-            <a href="../index.html">Главная</a> |
-            <a href="films.html">Фильмы</a> |
-            <a href="serials.html">Сериалы</a> |
-            <a href="rating.html">Рейтинг фильмов</a> |
-            <a href="contact.html">Контакты</a>
-        </p>
-        <p>wh-db.com 2015</p>
-    </div>
-
+    <footer>
+        <jsp:include page="footer.jsp"/>
+    </footer>
 
 </div>
 

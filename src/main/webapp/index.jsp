@@ -4,29 +4,11 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/slider.css">
     <title>Главная</title>
-
 </head>
 <body>
 <div class="main">
-    <header class="header">
-        <div class="logo-signButton-flex">
-            <div class="logo">
-                <div class="logo_text">
-                    <h1><a href = "/">КиноМонстр</a></h1>
-                    <h2>Кино - наша страсть!</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="menubar">
-            <ul class="menu">
-                <li class="selected"><a href = "index.jsp">Главная</a></li>
-                <li><a href = "films.jsp">Фильмы</a></li>
-                <li><a href = "serials.jsp">Сериалы</a></li>
-                <li><a href = "rating.jsp">Рейтинг фильмов/сериалов</a></li>
-                <li><a href = "contact.jsp">Контакты</a></li>
-            </ul>
-        </div>
+    <header>
+        <jsp:include page="header.jsp"/>
     </header>
 
     <main class="site_content">
@@ -75,7 +57,7 @@
         <div class="content">
             <h1>Новые фильмы</h1>
             <div class="films_block">
-                <button class="slider-prev"><img src="img/white-arrow-left.svg" alt="стрелка"></button>
+                <button class="slider-prev">&#9668;</button>
                 <div class="slider-container">
                     <div class="slider-films">
                         <img src="img/films/matrix.png" alt="ideas">
@@ -85,12 +67,12 @@
                         <img src="img/serials/dead.png" alt="cat">
                     </div>
                 </div>
-                <button class="slider-next"><img src="img/white-arrow-right.svg" alt="стрелка"></button>
+                <button class="slider-next">&#9658;</button>
             </div>
 
             <h1>Новые сериалы</h1>
             <div class="films_block">
-                <button class="slider-back"><img src="img/white-arrow-left.svg" alt="стрелка"></button>
+                <button class="slider-back">&#9668;</button>
                 <div class="slider-container">
                     <div class="slider-serials">
                         <img src="img/serials/dead.png" alt="ideas">
@@ -100,7 +82,7 @@
                         <img src="img/films/cloud.png" alt="cat">
                     </div>
                 </div>
-                <button class="slider-forward"><img src="img/white-arrow-right.svg" alt="стрелка"></button>
+                <button class="slider-forward">&#9658;</button>
             </div>
 
             <div class="posts">
@@ -133,15 +115,8 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <p>
-            <a href="page.html">Главная</a> |
-            <a href="layout/films.html">Фильмы</a> |
-            <a href="layout/serials.html">Сериалы</a> |
-            <a href="layout/rating.html">Рейтинг фильмов</a> |
-            <a href="layout/contact.html">Контакты</a>
-        </p>
-        <p>wh-db.com 2015</p>
+    <footer>
+        <jsp:include page="footer.jsp"/>
     </footer>
 
 </div>
