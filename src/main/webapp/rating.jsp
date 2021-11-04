@@ -18,46 +18,8 @@
     <div class="site_content">
 
         <div class="sidebar_container">
-
-            <div class="sidebar">
-                <h2>Поиск</h2>
-                <form method="post" action="#" id="search_form">
-                    <input type="search" name="search_field" placeholder="ваш запрос" />
-                    <input type="submit" class="btn" value="найти" />
-                </form>
-            </div>
-
-
-            <div class="sidebar">
-                <h2>Новости</h2>
-                <span>31.03.2017</span>
-                <p>Мы запустили расширенный поиск</p>
-                <a href="#">читать</a>
-            </div>
-
-
-
-            <div class="sidebar">
-                <h2>Рейтинг фильмов</h2>
-                <ul>
-                    <li><a href="#">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
-                    <li><a href="#">Матрица</a><span class="rating_sidebar">8.0</span></li>
-                    <li><a href="#">Безумный макс</a><span class="rating_sidebar">7.5</span></li>
-                    <li><a href="#">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
-                </ul>
-            </div>
-
-            <div class="sidebar">
-                <h2>Рейтинг сериалов</h2>
-                <ul>
-                    <li><a href="#">Во все тяжкие</a><span class="rating_sidebar">8.1</span></li>
-                    <li><a href="#">Ходячие мертвецы</a><span class="rating_sidebar">8.0</span></li>
-                    <li><a href="#">Кремниевая долина</a><span class="rating_sidebar">7.5</span></li>
-                    <li><a href="#">Секретные материалы</a><span class="rating_sidebar">7.4</span></li>
-                </ul>
-            </div>
+            <jsp:include page="sidebarContent.jsp"/>
         </div>
-
 
         <div class="content">
 
