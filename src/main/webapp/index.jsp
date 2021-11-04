@@ -17,7 +17,7 @@
 
             <div class="sidebar">
                 <h2>Поиск</h2>
-                <form method="post" action="/layout/show_films_pages.html" id="search_form">
+                <form method="post" action="#" id="search_form">
                     <input type="search" name="search_field" placeholder="ваш запрос" />
                     <input type="submit" class="btn" value="найти" />
                 </form>
@@ -124,3 +124,4 @@
 <script src="javascript/slider.js"></script>
 </body>
 </html>
+

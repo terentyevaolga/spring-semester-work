@@ -44,18 +44,17 @@ public class SendReviewServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/jsp/review.jsp").forward(request, response);
+        request.getRequestDispatcher("review.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         SendReviewForm sendReviewForm = new SendReviewForm();
-        sendReviewForm.setName(req.getParameter("name"));
-        sendReviewForm.setEmail(req.getParameter("email"));
+        sendReviewForm.setPhone(req.getParameter("phone"));
         sendReviewForm.setReviewText(req.getParameter("reviewText"));
 
         userService.sendReview(sendReviewForm);
-        req.getRequestDispatcher("/jsp/review.jsp").forward(req, resp);
+        req.getRequestDispatcher("review.jsp").forward(req, resp);
     }
 }

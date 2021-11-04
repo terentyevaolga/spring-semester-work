@@ -2,27 +2,23 @@ package models;
 
 public class Review {
     private Long id;
-    private String userName;
-    private String userEmail;
+    private String userPhone;
     private String userReviewText;
 
-    public Long getId() { return id;}
-    public void setId(Long id) { this.id = id; }
-
-    public String getUserName() {
-        return userName;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     public String getUserReviewText() {

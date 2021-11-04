@@ -81,3 +81,10 @@ textarea.error {
     color: #fff;
     margin-top: 20px;
 }
+
+.sendReview-form textarea {
+    width: 516px;
+    height: 200px;
+    border: solid 1px #c3c3c3;
+    margin-bottom: 2%;
+}

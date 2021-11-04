@@ -27,7 +27,7 @@ button {
     border: none;
     margin-left: 20px;
     margin-top: 180px;
-    cursor: auto;
+    cursor: pointer;
 }
 
 button img {

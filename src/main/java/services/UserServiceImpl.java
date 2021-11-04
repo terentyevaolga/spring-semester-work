@@ -63,8 +63,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Review sendReview(SendReviewForm sendReviewForm) {
         Review review = new Review();
-        review.setUserName(sendReviewForm.getName());
-        review.setUserEmail(sendReviewForm.getEmail());
+        review.setUserPhone(sendReviewForm.getPhone());
         review.setUserReviewText(sendReviewForm.getReviewText());
 
         return usersRepository.save(review);

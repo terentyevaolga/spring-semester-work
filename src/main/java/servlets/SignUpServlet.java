@@ -40,7 +40,7 @@ public class SignUpServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("jsp/signup.jsp").forward(request, response);
+        request.getRequestDispatcher("signup.jsp").forward(request, response);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class SignUpServlet extends HttpServlet {
         usersService.signup(signUpForm);
 
 //        req.getRequestDispatcher("/jsp/signup.jsp").forward(req, resp);
-        req.getRequestDispatcher("jsp/review.jsp").forward(req, resp);
+        req.getRequestDispatcher("review.jsp").forward(req, resp);
     }
 
 }

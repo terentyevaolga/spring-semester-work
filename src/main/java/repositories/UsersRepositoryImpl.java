@@ -13,7 +13,7 @@ public class UsersRepositoryImpl implements UsersRepository {
 
     private final String INSERT_INTO_USERDATA = "insert into userdata(name, email, passwordHash) values(?, ?, ?)";
     private final String FIND_USER_BY_NAME = "select * from userdata where name=?;";
-    private final String INSERT_INTO_REVIEWS_ABOUT_SITE = "insert into reviews_about_site(userName, userEmail, reviewText) values (?, ?, ?)";
+    private final String INSERT_INTO_REVIEWS_ABOUT_SITE = "insert into reviews_about_site(userPhone, reviewText) values (?, ?)";
 
     public UsersRepositoryImpl(Connection connection) {
         this.connection = connection;
@@ -62,9 +62,8 @@ public class UsersRepositoryImpl implements UsersRepository {
 
         try {
             preparedStatement = connection.prepareStatement(INSERT_INTO_REVIEWS_ABOUT_SITE, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, review.getUserName());
-            preparedStatement.setString(2, review.getUserEmail());
-            preparedStatement.setString(3, review.getUserReviewText());
+            preparedStatement.setString(1, review.getUserPhone());
+            preparedStatement.setString(2, review.getUserReviewText());
 
             resultSet = preparedStatement.executeQuery();
             if(resultSet.next()) {

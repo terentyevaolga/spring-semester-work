@@ -1,33 +1,23 @@
 package forms;
 
 public class SendReviewForm {
-    private String name;
-    private String email;
+    private String phone;
     private String reviewText;
 
     public SendReviewForm() {
     }
 
-    public SendReviewForm(String name, String email, String reviewText) {
-        this.name = name;
-        this.email = email;
+    public SendReviewForm(String phone, String reviewText) {
+        this.phone = phone;
         this.reviewText = reviewText;
     }
 
-    public String getName() {
-        return name;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getReviewText() {
@@ -41,8 +31,7 @@ public class SendReviewForm {
     @Override
     public String toString() {
         return "SendReviewForm{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                "phone='" + phone + '\'' +
                 ", reviewText='" + reviewText + '\'' +
                 '}';
     }
