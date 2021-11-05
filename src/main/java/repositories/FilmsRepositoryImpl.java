@@ -13,7 +13,7 @@ public class FilmsRepositoryImpl implements FilmsRepository {
 
     private final String INSERT_INTO_FILMS = "insert into film(image_url, description) values(?, ?);";
     private final String FIND_FILM_BY_ID = "select * from \"film\" where id=?;";
-    private final String FIND_FILM_ALL = "select * from film;";
+    private final String FIND_FILM_ALL = "select * from film";
 
     public FilmsRepositoryImpl(Connection connection) {
         this.connection = connection;
