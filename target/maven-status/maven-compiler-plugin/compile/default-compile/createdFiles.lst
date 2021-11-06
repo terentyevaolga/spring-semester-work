@@ -3,6 +3,7 @@ filters\AuthFilter.class
 helper\CheckParametersHelper.class
 servlets\SendReviewServlet.class
 services\UserServiceImpl.class
+servlets\FileDownloadServlet.class
 forms\SignUpForm.class
 models\User.class
 servlets\ShowFilmServlet.class
@@ -14,6 +15,7 @@ filters\CheckParametersFilter.class
 forms\SendReviewForm.class
 forms\SignInForm.class
 repositories\SerialsRepositoryImpl.class
+models\Photo.class
 services\UserService.class
 servlets\LoginServlet.class
 repositories\AuthRepositoryImpl.class

@@ -1,4 +1,5 @@
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\SerialsServlet.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\FileUploadingServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\services\UserService.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\services\UserServiceImpl.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Serial.java
@@ -12,12 +13,14 @@ C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\Ch
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Auth.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SendReviewForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Film.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Photo.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\ShowSerialServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\ShowFilmServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Review.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\AuthRepositoryImpl.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\SignUpServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\UsersRepositoryImpl.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\FileDownloadServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\AuthFilter.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\UsersRepository.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\SerialsRepositoryImpl.java
