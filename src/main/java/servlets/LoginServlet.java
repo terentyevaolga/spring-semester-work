@@ -17,7 +17,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebServlet(urlPatterns = "/signin")
+@WebServlet("/signin")
 public class LoginServlet extends HttpServlet {
 
     private UserService userService;
@@ -58,6 +58,7 @@ public class LoginServlet extends HttpServlet {
             resp.addCookie(cookie);
             req.getRequestDispatcher("review.jsp").forward(req, resp);
         } else {
+            req.setAttribute("signInStatus", "Неправильный логин или пароль! Повторите попытку!");
             req.getRequestDispatcher("signin.jsp").forward(req, resp);
         }
 

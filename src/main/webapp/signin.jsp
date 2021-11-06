@@ -14,6 +14,7 @@
         <input type="submit" value="Войти" class="btn">
     </form>
 </div>
+<h3>${signInStatus}</h3>
 
 <script>
     let signin = document.querySelector('.signin-form'),

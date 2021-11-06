@@ -55,6 +55,6 @@ public class SendReviewServlet extends HttpServlet {
         sendReviewForm.setReviewText(req.getParameter("comment"));
 
         userService.sendReview(sendReviewForm);
-        req.getRequestDispatcher("review.jsp").forward(req, resp);
+        req.getRequestDispatcher("reviewAfter.jsp").forward(req, resp);
     }
 }

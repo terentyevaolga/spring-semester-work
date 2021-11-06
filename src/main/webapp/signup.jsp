@@ -11,7 +11,9 @@
     <form class="signup-form" method="post" action="/signup">
         <input class="input input-field name" type="text" id="name" name="name" placeholder="Логин">
         <input class="input input-field email" type="email" id="email" name="email" placeholder="Email">
-        <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль(от 4 до 8 символов, 1 заглавная буква и цифра)">
+        <lable for="password">Длина пароля от 4 до 8 символов, обязательны одна заглавная буква и цифра
+            <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль">
+        </lable>
         <input type="submit" value="Регистрация" class="btn">
     </form>
 </div>
@@ -32,15 +34,8 @@
         return re.test(String(country).toLowerCase());
     }
 
-    // /* валидация пароля: от 6 до 20 символов, 1 цифра, 1 большая буква, 1 маленькая буква, только латинский алфавит*/
-    // function validatePassword(password) {
-    //     let re = /(?=.*\d+.*)(?=.*[A-Z]+.*)\w{4,8}/;
-    //     return re.test(String(password).toLowerCase());
-    // }
-
     form.onsubmit = function () {
         let email = inputEmail.value,
-            password = inputPassword.value,
             emptyInputs = Array.from(formInputs).filter(input => input.value === '');
 
         formInputs.forEach(function (input) {
@@ -61,13 +56,6 @@
         } else {
             email.classList.remove('error');
         }
-
-        // if (!validatePassword(password)) {
-        //     password.classList.add('error');
-        //     return false;
-        // } else {
-        //     password.classList.remove('error');
-        // }
 
         if (!validateCountry(email)) {
             email.classList.add('error');

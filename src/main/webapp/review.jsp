@@ -2,25 +2,74 @@
 <html>
 <head>
     <title>Отзыв о портале</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <%--    <link rel="stylesheet" href="../css/style.css">--%>
     <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
 
 <div class="form-style-5">
-    <h2>Пожалуйста, оставьте ваш отзыв о портале КиноМонстр</h2>
-    <form class="sendReview-form" method="post" action="/sendReview">
-<%--            <input class="input input-field name" id="name" type="text" name="name" placeholder="Ваше имя">--%>
-<%--            <input class="input input-field email" id="email" type="email" name="email" placeholder="Ваш email">--%>
-            <input class="input input-field phone" id="phone" type="text" name="phone" placeholder="+7 (___) __ - __ - __">
+    <%--    <h2>${user.name},</h2>--%>
+    <h2>пожалуйста, оставьте ваш отзыв о портале КиноМонстр</h2>
+    <form class="sendReviewForm" method="post" action="/sendReview">
+        <input class="input input-field phone" id="phone" type="text" name="phone" placeholder="+7 (___) __ - __ - __">
+        <lable for="comment">Длина отзыва должна быть не менее 10 символов
             <input class="input input-field text" id="comment" name="comment" placeholder=". . .">
-            <input type="submit" value="Отправить отзыв" class="btn">
-
-            <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
+        </lable>
+        <input type="submit" value="Отправить отзыв" class="btn">
     </form>
+        <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
 </div>
 
+<%--пока что скрипт не работает по неизвестным причинам--%>
+<script>
+    let form = document.querySelector('.sendReviewForm'),
+        formInputs = document.querySelectorAll('.input-field'),
+        inputPhone = document.querySelector('.phone'),
+        inputComment = document.querySelector('.comment')
 
-<script src="javascript/sendReview.js"></script>
+    function validatePhone(phone) {
+        let re = /^\d[\d\(\)\ -]{4,14}\d$/
+        return re.test(String(phone));
+    }
+
+    function validateComment(comment) {
+        let re = /^.{5,10}$/
+        return re.test(String(comment));
+    }
+
+    form.onsubmit = function () {
+        let phone = inputPhone.value,
+            comment = inputComment.value,
+            emptyInputs = Array.from(formInputs).filter(input => input.value === '');
+
+        formInputs.forEach(function (input) {
+            if (input.value === '') {
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+
+        if (emptyInputs.length !== 0) {
+            return false;
+        }
+
+        if (!validatePhone(phone)) {
+            phone.classList.add('error');
+            return false;
+        } else {
+            phone.classList.remove('error');
+        }
+
+        if (!validateComment(comment)) {
+            comment.classList.add('error');
+            return false;
+        } else {
+            comment.classList.remove('error');
+        }
+    }
+</script>
+
 </body>
 </html>
+

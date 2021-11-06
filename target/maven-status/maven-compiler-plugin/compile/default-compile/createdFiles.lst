@@ -8,6 +8,7 @@ forms\SignUpForm.class
 models\User.class
 servlets\ShowFilmServlet.class
 servlets\ShowSerialServlet.class
+filters\CheckParReviewFilter.class
 repositories\AuthRepository.class
 repositories\UsersRepository.class
 servlets\SerialsServlet.class
