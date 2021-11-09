@@ -16,7 +16,7 @@
         </lable>
         <input type="submit" value="Регистрация" class="btn">
     </form>
-    <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
+    <div class="button"><a href="/index">Вернуться на главную</a></div>
 </div>
 
 <script>

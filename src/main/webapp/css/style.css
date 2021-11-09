@@ -167,6 +167,10 @@ li {
 	margin-left: 20px;
 }
 
+.search li a {
+	cursor: auto;
+}
+
 .feedback {
 	margin-top: 150px;
 	display: flex;
@@ -206,6 +210,10 @@ li {
 
 .slide.active {
 	flex: 10;
+}
+
+.posts_content {
+	margin-top: 50px;
 }
 
 .posts .posts_content {

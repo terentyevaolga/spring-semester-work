@@ -3,8 +3,11 @@ filters\AuthFilter.class
 helper\CheckParametersHelper.class
 servlets\SendReviewServlet.class
 services\UserServiceImpl.class
+servlets\ArticlesServlet.class
+models\Article.class
 forms\SignUpForm.class
 models\User.class
+repositories\ArticlesRepositoryImpl.class
 servlets\ShowFilmServlet.class
 repositories\FilmReviewRepository.class
 filters\CheckParReviewFilter.class
@@ -17,6 +20,7 @@ forms\SignInForm.class
 services\UserService.class
 servlets\LoginServlet.class
 repositories\AuthRepositoryImpl.class
+repositories\ArticlesRepository.class
 servlets\FilmsServlet.class
 models\Auth.class
 models\FilmReview.class

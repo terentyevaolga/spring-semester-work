@@ -1,20 +1,4 @@
-* {
-    margin: 0;
-}
-
-html, body {
-    font-size: 18px;
-    font-family: sans-serif;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 30px auto;
-    background: #f1f1f1;
-    padding: 30px;
-}
-
-h1 {
+.content h1 {
     text-align: center;
     margin-bottom: 40px;
 }

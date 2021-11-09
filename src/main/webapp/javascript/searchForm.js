@@ -4,9 +4,10 @@ window.onload = () => {
         let value = this.value.trim();
         let list = document.querySelectorAll('.ul li');
 
+
         if(value !== '') {
             list.forEach(elem => {
-                if(elem.innerText.search(value) == -1) {
+                if(elem.innerText.search(value) === -1) {
                     elem.classList.add('hide');
                 }
             });
