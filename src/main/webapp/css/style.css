@@ -6,6 +6,7 @@
 html {
 	width: 100%;
 	max-width: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 	color: #555;
 	width: 100%;
 	max-width: 100%;
+	overflow-x: hidden;
 	min-width: 1200px;
 }
 
@@ -304,6 +306,7 @@ html .signin, .signup {
 
 .send {
 	margin-bottom: 4%;
+	margin-top: 10%;
 }
 
 .send input [type="text"], textarea {
@@ -317,7 +320,7 @@ html .signin, .signup {
 
 .send textarea {
 	width: 624px;
-	height: 200px;
+	height: 100px;
 }
 
 .send input[type="submit"] {

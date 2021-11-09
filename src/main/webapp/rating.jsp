@@ -32,68 +32,31 @@
                 </tr>
 
                 <tr>
-                    <td class="center"><img src="img/films/inter.png"></td>
+                    <td class="center"><img src="img/inter.png"></td>
                     <td>1. <a href="#">Интерстеллар</a></td>
                     <td class="center">2014</td>
                     <td class="center rating">8.1</td>
                 </tr>
 
                 <tr>
-                    <td class="center"><img src="img/films/matrix.png"></td>
+                    <td class="center"><img src="img/matrix.png"></td>
                     <td>2. <a href="#">Матрица</a></td>
                     <td class="center">1999</td>
                     <td class="center rating">8.0</td>
                 </tr>
 
                 <tr>
-                    <td class="center"><img src="img/films/max.png"></td>
+                    <td class="center"><img src="img/max.png"></td>
                     <td>3. <a href="#">Безумный макс</a></td>
                     <td class="center">2015</td>
                     <td class="center rating">7.5</td>
                 </tr>
 
                 <tr>
-                    <td class="center"><img src="img/films/cloud.png"></td>
+                    <td class="center"><img src="img/cloud.png"></td>
                     <td>4. <a href="#">Облачный атлас</a></td>
                     <td class="center">2013</td>
                     <td class="center rating">7.4</td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Сериалы</th>
-                    <th class="center">Год</th>
-                    <th class="center">Рейтинг</th>
-                </tr>
-
-                <tr>
-                    <td class="center"><img src="img/serials/breakingbad.png"></td>
-                    <td>1. <a href="#">Во все тяжкие</a></td>
-                    <td class="center">2019</td>
-                    <td class="center rating">7.2</td>
-                </tr>
-
-                <tr>
-                    <td class="center"><img src="img/serials/dead.png"></td>
-                    <td>2. <a href="#">Ходячие мертвецы</a></td>
-                    <td class="center">2010</td>
-                    <td class="center rating">9.0</td>
-                </tr>
-
-                <tr>
-                    <td class="center"><img src="img/serials/silicon.png"></td>
-                    <td>3. <a href="#">Кремниевая долина</a></td>
-                    <td class="center">2014</td>
-                    <td class="center rating">8.5</td>
-                </tr>
-
-                <tr>
-                    <td class="center"><img src="img/serials/xfiles.png"></td>
-                    <td>4. <a href="#">Секретные материалы</a></td>
-                    <td class="center">1993</td>
-                    <td class="center rating">8.2</td>
                 </tr>
             </table>
 

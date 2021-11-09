@@ -26,22 +26,13 @@
     <div class="sidebar">
         <h2>Рейтинг фильмов</h2>
         <ul>
-            <li><a href="layout/show_films_pages/showInterstellar.html">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
-            <li><a href="layout/show_films_pages/showMatrix.html">Матрица</a><span class="rating_sidebar">8.0</span></li>
-            <li><a href="layout/show_films_pages/showMax.html">Безумный макс</a><span class="rating_sidebar">7.5</span></li>
-            <li><a href="layout/show_films_pages/showCloud.html">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
+            <li><a href="#">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
+            <li><a href="#">Матрица</a><span class="rating_sidebar">8.0</span></li>
+            <li><a href="#">Безумный макс</a><span class="rating_sidebar">7.5</span></li>
+            <li><a href="#">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
         </ul>
     </div>
 
-    <div class="sidebar">
-        <h2>Рейтинг сериалов</h2>
-        <ul>
-            <li><a href="layout/show_serials_pages/showBreakingbad.html">Во все тяжкие</a><span class="rating_sidebar">8.1</span></li>
-            <li><a href="layout/show_serials_pages/showDead.html">Ходячие мертвецы</a><span class="rating_sidebar">8.0</span></li>
-            <li><a href="layout/show_serials_pages/showSilicon.html">Кремниевая долина</a><span class="rating_sidebar">7.5</span></li>
-            <li><a href="layout/show_serials_pages/showXfiles.html">Секретные материалы</a><span class="rating_sidebar">7.4</span></li>
-        </ul>
-    </div>
 </div>
 </body>
 </html>

@@ -9,11 +9,10 @@
     <p>
         <a href="index.jsp">Главная</a> |
         <a href="films.jsp">Фильмы</a> |
-        <a href="serials.jsp">Сериалы</a> |
         <a href="rating.jsp">Рейтинг фильмов</a> |
         <a href="contact.jsp">Контакты</a>
     </p>
-    <p>wh-db.com 2015</p>
+    <p>wh-db.com 2021</p>
 </footer>
 </body>
 </html>

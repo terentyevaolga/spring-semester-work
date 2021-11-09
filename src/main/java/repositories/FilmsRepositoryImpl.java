@@ -26,7 +26,6 @@ public class FilmsRepositoryImpl implements FilmsRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(FIND_FILM_ALL);
             resultSet = preparedStatement.executeQuery();
-
             while (resultSet.next()) {
                 Film film = new Film();
                 film.setId(resultSet.getInt("id"));
@@ -42,8 +41,26 @@ public class FilmsRepositoryImpl implements FilmsRepository {
     }
 
     @Override
-    public Optional<Film> findById(Long id) {
-        return Optional.empty();
+    public Film findById(int id) {
+        ResultSet resultSet = null;
+        Film film;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_FILM_BY_ID);
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                film = new Film();
+                film.setId(resultSet.getInt("id"));
+                film.setImageURL(resultSet.getString("image_url"));
+                film.setDescription(resultSet.getString("description"));
+                film.setName(resultSet.getString("name"));
+                return film;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override

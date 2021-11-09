@@ -72,5 +72,11 @@ button:hover {
 .films_block {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

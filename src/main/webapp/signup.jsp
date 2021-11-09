@@ -11,11 +11,12 @@
     <form class="signup-form" method="post" action="/signup">
         <input class="input input-field name" type="text" id="name" name="name" placeholder="Логин">
         <input class="input input-field email" type="email" id="email" name="email" placeholder="Email">
-        <lable for="password">Длина пароля от 4 до 8 символов, обязательны одна заглавная буква и цифра
+        <lable><p>Длина пароля от 4 до 8 символов, обязательны одна заглавная буква и цифра</p>
             <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль">
         </lable>
         <input type="submit" value="Регистрация" class="btn">
     </form>
+    <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
 </div>
 
 <script>

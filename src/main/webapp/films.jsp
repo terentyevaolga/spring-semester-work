@@ -28,7 +28,9 @@
                     <td>
                         <c:out value="${film.description}"/>
                     </td>
-                    <div class="button"><a href="show${film.name}.jsp">Смотреть</a></div>
+                    <form action="/films" method="post">
+                        <button type="submit" class="button" name="film" value="${film.id}">Смотреть</button>
+                    </form>
                 </div>
             </c:forEach>
 

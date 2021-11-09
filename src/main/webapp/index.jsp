@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>Главная</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/slider.css">
-    <title>Главная</title>
 </head>
 <body>
 <div class="main">
@@ -11,7 +11,7 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <main class="site_content">
+    <div class="site_content">
 
         <div class="sidebar_container">
             <jsp:include page="sidebarContent.jsp"/>
@@ -19,35 +19,20 @@
 
         <!-- делаем слайдер  -->
         <div class="content">
-            <h1>Новые фильмы</h1>
-            <div class="films_block">
-                <button class="slider-prev">&#9668;</button>
-                <div class="slider-container">
-                    <div class="slider-films">
-                        <img src="img/films/matrix.png" alt="ideas">
-                        <img src="img/films/max.png" alt="plisov">
-                        <img src="img/films/inter.png" alt="theories">
-                        <img src="img/films/cloud.png" alt="stiven">
-                        <img src="img/serials/dead.png" alt="cat">
+                <h1>Новые фильмы</h1>
+                <div class="films_block">
+                    <button class="slider-prev">&#9668;</button>
+                    <div class="slider-container">
+                        <div class="slider-films">
+                            <img src="img/matrix.png" alt="ideas">
+                            <img src="img/max.png" alt="plisov">
+                            <img src="img/inter.png" alt="theories">
+                            <img src="img/cloud.png" alt="stiven">
+                        </div>
                     </div>
+                    <button class="slider-next">&#9658;</button>
                 </div>
-                <button class="slider-next">&#9658;</button>
-            </div>
 
-            <h1>Новые сериалы</h1>
-            <div class="films_block">
-                <button class="slider-back">&#9668;</button>
-                <div class="slider-container">
-                    <div class="slider-serials">
-                        <img src="img/serials/dead.png" alt="ideas">
-                        <img src="img/serials/silicon.png" alt="plisov">
-                        <img src="img/serials/breakingbad.png" alt="theories">
-                        <img src="img/serials/xfiles.png" alt="stiven">
-                        <img src="img/films/cloud.png" alt="cat">
-                    </div>
-                </div>
-                <button class="slider-forward">&#9658;</button>
-            </div>
 
             <div class="posts">
 
@@ -77,7 +62,7 @@
             </div>
 
         </div>
-    </main>
+    </div>
 
     <footer>
         <jsp:include page="footer.jsp"/>
@@ -88,4 +73,7 @@
 <script src="javascript/slider.js"></script>
 </body>
 </html>
+
+
+
 

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -34,46 +35,37 @@
 
             <h2>Описание Интерстеллар</h2>
             <div class="description_film">
-                <img src="img/films/inter.png">
+                <img src="img/inter.png">
                 Наше время на Земле подошло к концу, команда исследователей берет на себя самую важную миссию в истории человечества; путешествуя за пределами нашей галактики, чтобы узнать есть ли у человечества будущее среди звезд.
             </div>
-
             <hr>
             <h2>Отзывы об Интерстеллар</h2>
 
-            <div class="reviews">
-                <div class="review_name">
-                    Сергей
+            <c:forEach var="review" items="${reviews}">
+                <div class="reviews">
+                    <div class="review_name">
+                        <td>
+                            <c:out value="${review.userName}"/>
+                        </td>
+                    </div>
+                    <div class="review_text">
+                        <td>
+                            <c:out value="${review.text}"/>
+                        </td>
+                    </div>
                 </div>
-
-                <div class="review_text">
-                    Отличный фильм, 3 часа пролетели незаметно.
-                </div>
-            </div>
-
-            <div class="reviews">
-                <div class="review_name">
-                    Дмитрий
-                </div>
-
-                <div class="review_text">
-                    После фильма Начало, я с нетерпением ждал еще работ от Кристофера Нолана. Интерстеллар меня впечатлил.
-                </div>
-            </div>
+            </c:forEach>
 
             <div class="send">
-                <form method="post" action="#" id="review" >
+                <form method="post" action="/show_film" id="review" >
 
                     <input type="text" name="review_name" placeholder="ваше имя">
                     <textarea name="review_text"></textarea>
                     <input type="submit" value="отправить">
-
                 </form>
-
             </div>
 
         </div>
-
     </div>
 
     <footer>

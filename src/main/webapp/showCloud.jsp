@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -34,43 +35,35 @@
 
             <h2>Описание Облачный атлас</h2>
             <div class="description_film">
-                <img src="img/films/cloud.png">
+                <img src="img/cloud.png">
                 Когда засуха приводит человечество к продовольственному кризису, коллектив исследователей и ученых отправляется сквозь червоточину (которая предположительно соединяет области пространства-времени через большое расстояние) в путешествие, чтобы превзойти прежние ограничения для космических путешетсвий человека и переселить человечество на другую планету.
             </div>
 
             <hr>
             <h2>Отзывы об Облачный атлас</h2>
 
-            <div class="reviews">
-                <div class="review_name">
-                    Маргарита
+            <c:forEach var="review" items="${reviews}">
+                <div class="reviews">
+                    <div class="review_name">
+                        <td>
+                            <c:out value="${review.userName}"/>
+                        </td>
+                    </div>
+                    <div class="review_text">
+                        <td>
+                            <c:out value="${review.text}"/>
+                        </td>
+                    </div>
                 </div>
-
-                <div class="review_text">
-                    Забавно видеть перетащенного из Матрицы агента Смита. Есть несколько шуток и смешных ситуаций, спецэффекты, интересная, но излишне мультяшная на мой вкус картинка. На этом всё.
-
-                </div>
-            </div>
-
-            <div class="reviews">
-                <div class="review_name">
-                    Андрей
-                </div>
-
-                <div class="review_text">
-                    Фильм - редкостная, дешёвая, но великолепно снятая дрянь, пересматривать которую (мне - россиянину) совсем не хочется.
-                </div>
-            </div>
+            </c:forEach>
 
             <div class="send">
-                <form method="post" action="#" id="review" >
+                <form method="post" action="/show_film" id="review" >
 
                     <input type="text" name="review_name" placeholder="ваше имя">
                     <textarea name="review_text"></textarea>
                     <input type="submit" value="отправить">
-
                 </form>
-
             </div>
 
         </div>

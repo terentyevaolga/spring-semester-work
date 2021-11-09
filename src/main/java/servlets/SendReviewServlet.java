@@ -58,3 +58,4 @@ public class SendReviewServlet extends HttpServlet {
         req.getRequestDispatcher("reviewAfter.jsp").forward(req, resp);
     }
 }
+
