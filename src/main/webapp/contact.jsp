@@ -11,37 +11,27 @@
         <jsp:include page="header.jsp"/>
     </header>
 
-    <main class="site_content">
+    <div class="site_content">
 
         <div class="sidebar_container">
             <jsp:include page="sidebarContent.jsp"/>
         </div>
 
-        <!--Форма для отправки отзывов от портале Киномонстр-->
         <div class="content">
             <h1>Контакты</h1>
             <p>Отправьте ваш отзыв о портале КиноМонстр</p>
 
-<%--            <div class="send send_contact">--%>
-<%--            <form method="post" action="/sendReview" id="contact">--%>
-<%--            <input type="text" name="review_name" placeholder="ваше имя">--%>
-<%--            <input type="text" name="review_email" placeholder="ваш email">--%>
-<%--            <textarea name="review_text"></textarea>--%>
-<%--            <input type="submit" value="отправить">--%>
-<%--            </form>--%>
-<%--            </div>--%>
             <div class="button"><a href="reviewRequest.jsp">Отправить отзыв</a></div>
 
+            <div class="feedback">
+                <h2>Вы также можете связаться с нами:</h2>
+                <a href="tel: 8(800) 550-04-49">&#9742;  8 (800) 550-04-79</a>
+                <a href="mailto:kinomonster@kino.ru">&#9997; kinomonster@kino.ru</a>
+            </div>
+
+
         </div>
-    </main>
-
-    <footer>
-        <jsp:include page="footer.jsp"/>
-    </footer>
-
+    </div>
 </div>
-
-<%--<script src="/javascript/modalWindow.js"></script>--%>
-
 </body>
 </html>

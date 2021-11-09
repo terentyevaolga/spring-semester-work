@@ -7,10 +7,10 @@
 <body>
 <footer class="footer">
     <p>
-        <a href="index.jsp">Главная</a> |
-        <a href="films.jsp">Фильмы</a> |
-        <a href="rating.jsp">Рейтинг фильмов</a> |
-        <a href="contact.jsp">Контакты</a>
+        <a href="#">Главная</a> |
+        <a href="#">Фильмы</a> |
+        <a href="#">Рейтинг фильмов</a> |
+        <a href="#">Контакты</a>
     </p>
     <p>wh-db.com 2021</p>
 </footer>

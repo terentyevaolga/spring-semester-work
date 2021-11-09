@@ -76,13 +76,13 @@
 
     </div>
 
-    <footer>
-        <jsp:include page="footer.jsp"/>
-    </footer>
+<%--    <footer>--%>
+<%--        <jsp:include page="footer.jsp"/>--%>
+<%--    </footer>--%>
 
 </div>
 
-<script src="/javascript/modalWindow.js"></script>
+<%--<script src="/javascript/modalWindow.js"></script>--%>
 
 </body>
 </html>

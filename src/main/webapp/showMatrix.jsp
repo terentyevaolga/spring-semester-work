@@ -62,8 +62,8 @@
             <div class="send">
                 <form method="post" action="/show_film" id="review" >
 
-                    <input type="text" name="review_name" placeholder="ваше имя">
-                    <textarea name="review_text"></textarea>
+                    <input type="text" name="review_name" placeholder="ваше имя" required="">
+                    <textarea name="review_text" required=""></textarea>
                     <input type="submit" value="отправить">
                 </form>
             </div>

@@ -2,25 +2,25 @@
 <html>
 <head>
     <title>Отзыв о портале</title>
-    <%--    <link rel="stylesheet" href="../css/style.css">--%>
     <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
 
 <div class="form-style-5">
-    <%--    <h2>${user.name},</h2>--%>
-    <h2>пожалуйста, оставьте ваш отзыв о портале КиноМонстр</h2>
+    <h2>Пожалуйста, оставьте ваш отзыв о портале КиноМонстр</h2>
     <form class="sendReviewForm" method="post" action="/sendReview">
-        <input class="input input-field phone" id="phone" type="text" name="phone" placeholder="+7 (___) __ - __ - __">
+        <lable>Укажите номер мобильного телефона, чтобы мы могли связаться с вами
+            <input class="input input-field phone" id="phone" type="text" name="phone" placeholder="+7 (___) __ - __ - __">
+        </lable>
         <lable for="comment">Длина отзыва должна быть не менее 10 символов
-            <input class="input input-field text" id="comment" name="comment" placeholder=". . .">
+            <textarea class="input input-field comment" name="comment" id="comment"></textarea>
         </lable>
         <input type="submit" value="Отправить отзыв" class="btn">
     </form>
         <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
 </div>
 
-<%--пока что скрипт не работает по неизвестным причинам--%>
+
 <script>
     let form = document.querySelector('.sendReviewForm'),
         formInputs = document.querySelectorAll('.input-field'),
@@ -62,11 +62,12 @@
         }
 
         if (!validateComment(comment)) {
-            comment.classList.add('error');
+            phone.classList.add('error');
             return false;
         } else {
-            comment.classList.remove('error');
+            phone.classList.remove('error');
         }
+
     }
 </script>
 

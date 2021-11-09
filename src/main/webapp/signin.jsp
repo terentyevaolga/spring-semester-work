@@ -13,8 +13,9 @@
         <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль">
         <input type="submit" value="Войти" class="btn">
     </form>
+    <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
 </div>
-<h3>${signInStatus}</h3>
+<%--<h3>${signInStatus}</h3>--%>
 
 <script>
     let signin = document.querySelector('.signin-form'),
