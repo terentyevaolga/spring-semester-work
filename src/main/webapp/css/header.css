@@ -2,8 +2,8 @@
     background-color: darkslateblue;
     height: 177px;
     font-size: 0.8em;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .logo{
@@ -104,3 +104,4 @@ ul.menu li a:hover {
 hr {
     border: solid 1px #f3f3f3;
 }
+

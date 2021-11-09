@@ -11,6 +11,6 @@ public interface FilmsRepository {
     List<Film> findAll();
     Film findById(int id);
     Film save(Film film);
-    void deleteById(Long id);
+    void deleteById(int id);
     Film findByName(String name);
 }

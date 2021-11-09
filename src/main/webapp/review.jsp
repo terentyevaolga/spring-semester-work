@@ -18,6 +18,7 @@
         <input type="submit" value="Отправить отзыв" class="btn">
     </form>
         <div class="button"><a href="index.jsp">Вернуться на главную</a></div>
+        <div class="button"><a href="profile.jsp">Личный кабинет</a></div>
 </div>
 
 

@@ -10,7 +10,7 @@ public class CheckParametersHelper {
     }
 
     public static boolean checkPassword(String password){
-        return password.matches("(?=.*\\d+.*)(?=.*[A-Z]+.*)\\w{4,8}");
+        return password.matches("(?=.*\\d+.*)(?=.*[A-Z]+.*)\\w{4,12}");
     }
 
     public static boolean checkPhone (String phone) {

@@ -12,7 +12,7 @@ public interface AuthRepository extends PasswordEncoder {
     Auth findByCookieValue(String cookieValue);
     List<Auth> findAll();
     Optional<Auth> findById(Long id);
-    User save(Auth auth);
+    Auth save(Auth auth);
     void deleteById(Long id);
 }
 

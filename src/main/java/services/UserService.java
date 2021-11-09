@@ -12,4 +12,5 @@ public interface UserService {
     User signup(SignUpForm signUpForm);
     Cookie signin(SignInForm signInForm);
     Review sendReview(SendReviewForm sendReviewForm);
+    User findUserByCookieValue(String cookieValue);
 }

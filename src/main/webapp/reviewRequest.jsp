@@ -6,8 +6,9 @@
     <title>Контакты</title>
     <meta name="description" content = "Киномонстр - это портал о кино" />
     <meta name="keywords" content = "фильмы, фильмы онлайн, hd" />
-    <link rel="stylesheet" href="../css/style.css"></head>
+    <link rel="stylesheet" href="../css/style.css">
 
+</head>
 <body>
 <div class="main">
     <header>

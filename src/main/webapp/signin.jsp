@@ -15,7 +15,6 @@
     </form>
     <div class="button"><a href="/index">Вернуться на главную</a></div>
 </div>
-<%--<h3>${signInStatus}</h3>--%>
 
 <script>
     let signin = document.querySelector('.signin-form'),

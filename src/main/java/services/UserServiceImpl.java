@@ -3,6 +3,7 @@ package services;
 import forms.SendReviewForm;
 import forms.SignInForm;
 import forms.SignUpForm;
+import models.Auth;
 import models.Review;
 import models.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -67,6 +68,16 @@ public class UserServiceImpl implements UserService {
         review.setUserReviewText(sendReviewForm.getReviewText());
 
         return usersRepository.save(review);
+    }
+
+    @Override
+    public User findUserByCookieValue(String cookieValue) {
+        Auth auth = authRepository.findByCookieValue(cookieValue);
+        if (auth != null) {
+            return auth.getUser();
+        } else {
+            return null;
+        }
     }
 }
 

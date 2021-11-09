@@ -2,6 +2,7 @@ C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Fil
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\ArticlesRepositoryImpl.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\services\UserService.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\services\UserServiceImpl.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\ProfileServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SignInForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\FilmsRepository.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\filters\CheckParReviewFilter.java
@@ -13,6 +14,7 @@ C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Aut
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\forms\SendReviewForm.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Film.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\FilmReviewRepositoryImpl.java
+C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\mapper\RowMapper.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\repositories\ArticlesRepository.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\servlets\ShowFilmServlet.java
 C:\Users\Ольга\IdeaProjects\servlets-semester-work\src\main\java\models\Review.java
