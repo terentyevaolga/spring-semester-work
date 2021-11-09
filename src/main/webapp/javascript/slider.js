@@ -2,7 +2,7 @@ let offset = 0;
 const sliderLine = document.querySelector('.slider-films');
 
 document.querySelector('.slider-next').addEventListener('click', function (){
-    offset = offset + 205;
+    offset = offset + 220;
     if(offset > 768){
         offset = 0;
     }
@@ -10,7 +10,7 @@ document.querySelector('.slider-next').addEventListener('click', function (){
 });
 
 document.querySelector('.slider-prev').addEventListener('click', function (){
-    offset = offset - 205;
+    offset = offset - 220;
     if(offset < 0){
         offset = 768;
     }

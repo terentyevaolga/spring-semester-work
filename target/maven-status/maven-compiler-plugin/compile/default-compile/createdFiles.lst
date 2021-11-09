@@ -7,7 +7,6 @@ forms\SignUpForm.class
 models\User.class
 servlets\ShowFilmServlet.class
 repositories\FilmReviewRepository.class
-servlets\ShowSerialServlet.class
 filters\CheckParReviewFilter.class
 repositories\AuthRepository.class
 repositories\UsersRepository.class
@@ -15,7 +14,6 @@ repositories\FilmReviewRepositoryImpl.class
 filters\CheckParametersFilter.class
 forms\SendReviewForm.class
 forms\SignInForm.class
-repositories\SerialsRepositoryImpl.class
 services\UserService.class
 servlets\LoginServlet.class
 repositories\AuthRepositoryImpl.class
@@ -23,8 +21,6 @@ servlets\FilmsServlet.class
 models\Auth.class
 models\FilmReview.class
 repositories\FilmsRepository.class
-repositories\SerialsRepository.class
-models\Serial.class
 repositories\FilmsRepositoryImpl.class
 models\Film.class
 models\Review.class
