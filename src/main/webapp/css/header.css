@@ -105,3 +105,26 @@ hr {
     border: solid 1px #f3f3f3;
 }
 
+.logo-signButton-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logo-signButton-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.sign {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.sign a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-right: 30px;
+}

@@ -21,7 +21,7 @@
             <h1>Контакты</h1>
             <p>Отправьте ваш отзыв о портале КиноМонстр</p>
 
-            <div class="button"><a href="reviewRequest.jsp">Отправить отзыв</a></div>
+            <div class="button"><a href="review.jsp">Отправить отзыв</a></div>
 
             <div class="feedback">
                 <h2>Вы также можете связаться с нами:</h2>

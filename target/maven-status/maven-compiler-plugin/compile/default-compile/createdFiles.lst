@@ -8,7 +8,6 @@ models\Article.class
 forms\SignUpForm.class
 models\User.class
 repositories\ArticlesRepositoryImpl.class
-servlets\ProfileServlet.class
 servlets\ShowFilmServlet.class
 repositories\FilmReviewRepository.class
 filters\CheckParReviewFilter.class
