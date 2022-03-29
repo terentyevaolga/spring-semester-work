@@ -1,39 +1,19 @@
 package ru.kpfu.itis.models;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 import lombok.*;
-@Setter
-@Getter
-@EqualsAndHashCode
-@ToString
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 
+@Entity
 public class Auth {
+    @Id
     private Long id;
+    @OneToOne(mappedBy = "id")
     private User user;
     private String cookieValue;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public String getCookieValue() {
-        return cookieValue;
-    }
-
-    public void setCookieValue(String cookieValue) {
-        this.cookieValue = cookieValue;
-    }
 }

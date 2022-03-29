@@ -1,5 +1,8 @@
 package ru.kpfu.itis.config;
 
+import java.util.Objects;
+
+import com.zaxxer.hikari.HikariConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -25,9 +28,6 @@ import javax.sql.DataSource;
 @ComponentScan(value = "ru.kpfu.itis")
 public class ApplicationConfig extends WebMvcConfigurationSupport {
 
-    @Autowired
-    private Environment environment;
-
     @Bean
     public NamedParameterJdbcTemplate namedParameterJdbcTemplate(DataSource dataSource) {
         return new NamedParameterJdbcTemplate(dataSource);
@@ -49,16 +49,6 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
     @Bean
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
-    }
-
-    @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(environment.getProperty("db.driver"));
-        dataSource.setUsername(environment.getProperty("db.user"));
-        dataSource.setPassword(environment.getProperty("db.password"));
-        dataSource.setUrl(environment.getProperty("db.url"));
-        return dataSource;
     }
 
     @Bean

@@ -1,48 +1,19 @@
 package ru.kpfu.itis.models;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 import lombok.*;
-@Setter
-@Getter
-@EqualsAndHashCode
-@ToString
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Entity
 public class FilmReview {
+    @Id
     private int id;
     private String userName;
     private String text;
-    private int filmId;
-
-    public int getFilmId() {
-        return filmId;
-    }
-
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
+    @OneToOne
+    private FilmReview filmId;
 }

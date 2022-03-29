@@ -21,23 +21,6 @@ public class SendReviewServlet extends HttpServlet {
 
     private UserService userService;
 
-    private final String DB_URL = "jdbc:postgresql://localhost:5432/DBsemester";
-    private final String DB_USERNAME = "postgres";
-    private final String DB_PASSWORD = "aser4321";
-
-    @Override
-    public void init() throws ServletException {
-        try {
-            Class.forName("org.postgresql.Driver");
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-
-            UsersRepository usersRepository = new UsersRepositoryImpl(connection);
-            userService = new UserServiceImpl(usersRepository);
-        } catch (SQLException | ClassNotFoundException e) {
-            throw new IllegalStateException(e);
-        }
-    }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("review.jsp").forward(request, response);
