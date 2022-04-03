@@ -61,24 +61,9 @@ public class DatabaseConfig {
     LocalContainerEntityManagerFactoryBean containerEntityManagerFactoryBean =
         new LocalContainerEntityManagerFactoryBean();
     containerEntityManagerFactoryBean.setDataSource(dataSource());
-    containerEntityManagerFactoryBean.setPackagesToScan("ru.itis.tyshenko.entity");
+    containerEntityManagerFactoryBean.setPackagesToScan("ru.kpfu.itis.models");
     containerEntityManagerFactoryBean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
-    containerEntityManagerFactoryBean.setJpaProperties(additionalProperties());
     return containerEntityManagerFactoryBean;
-  }
-
-  private Properties additionalProperties() {
-    Properties properties = new Properties();
-    properties.setProperty("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
-    properties.setProperty("hibernate.dialect", environment.getProperty("hibernate.dialect"));
-    properties.setProperty("hibernate.show_sql", environment.getProperty("hibernate.show_sql"));
-    properties.setProperty("hibernate.connection.CharSet",
-        environment.getProperty("hibernate.connection.CharSet"));
-    properties.setProperty("hibernate.connection.characterEncoding",
-        environment.getProperty("hibernate.connection.characterEncoding"));
-    properties.setProperty("hibernate.connection.useUnicode",
-        environment.getProperty("hibernate.connection.useUnicode"));
-    return properties;
   }
 
   @Bean

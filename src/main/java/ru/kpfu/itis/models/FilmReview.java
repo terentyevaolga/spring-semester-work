@@ -15,5 +15,5 @@ public class FilmReview {
     private String userName;
     private String text;
     @OneToOne
-    private FilmReview filmId;
+    private Film film;
 }

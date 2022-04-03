@@ -1,24 +1,32 @@
 package ru.kpfu.itis.security.details;
 
 import java.util.Collection;
+import java.util.Collections;
 
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import ru.kpfu.itis.models.User;
 
+@AllArgsConstructor
 public class UserDetailsImpl implements UserDetails {
+
+  private final User user;
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {
-    return null;
+    SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority(user.getRole().name());
+    return Collections.singleton(simpleGrantedAuthority);
   }
 
   @Override
   public String getPassword() {
-    return null;
+    return user.getPasswordHash();
   }
 
   @Override
   public String getUsername() {
-    return null;
+    return user.getName();
   }
 
   @Override

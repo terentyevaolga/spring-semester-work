@@ -1,8 +1,12 @@
 package ru.kpfu.itis.models;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 import lombok.*;
+import sun.security.mscapi.CPublicKey;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -15,4 +19,10 @@ public class User {
     private String name;
     private String passwordHash;
     private String email;
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public enum Role {
+        ADMIN, USER
+    }
 }

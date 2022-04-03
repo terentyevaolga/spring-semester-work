@@ -1,11 +1,9 @@
 package ru.kpfu.itis.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.kpfu.itis.models.Article;
 
 import java.util.List;
 
-public interface ArticlesRepository extends JpaRepository {
-    List<Article> findAll();
-    Article findById(int id);
-    Article save(Article article);
+public interface ArticlesRepository extends JpaRepository<Article, Integer> {
 }

@@ -1,5 +1,6 @@
 package ru.kpfu.itis.services;
 
+import org.springframework.stereotype.Service;
 import ru.kpfu.itis.forms.SendReviewForm;
 import ru.kpfu.itis.forms.SignInForm;
 import ru.kpfu.itis.forms.SignUpForm;
@@ -14,6 +15,7 @@ import ru.kpfu.itis.repositories.UsersRepository;
 import javax.servlet.http.Cookie;
 import java.util.UUID;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     private UsersRepository usersRepository;
