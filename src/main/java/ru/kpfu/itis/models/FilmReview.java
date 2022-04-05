@@ -1,7 +1,5 @@
 package ru.kpfu.itis.models;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 import lombok.*;
 @Data
@@ -14,6 +12,6 @@ public class FilmReview {
     private int id;
     private String userName;
     private String text;
-    @OneToOne
+    @ManyToOne
     private Film film;
 }

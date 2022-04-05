@@ -1,4 +1,4 @@
-package ru.kpfu.itis.servlets;
+package ru.kpfu.itis.cotrollers;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,7 +28,7 @@ public class ArticlesController {
     }
 
     @PostMapping
-    public String setArticleToSession(Model model, HttpSession session) throws ServletException, IOException {
+    public String setArticleToSession(Model model, HttpSession session) {
         Integer s = Integer.valueOf((String) Objects.requireNonNull(model.getAttribute("article")));
         session.setAttribute("article", s);
         return "redirect:/main";
