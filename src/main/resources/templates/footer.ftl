@@ -1,10 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Footer</title>
-</head>
-<body>
 <footer class="footer">
     <p>
         <a href="#">Главная</a> |
@@ -14,5 +7,3 @@
     </p>
     <p>wh-db.com 2021</p>
 </footer>
-</body>
-</html>

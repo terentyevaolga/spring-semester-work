@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Objects;
 
-@Controller("/show_film")
+@Controller
 @AllArgsConstructor
 public class FilmController {
 
@@ -41,7 +41,8 @@ public class FilmController {
     @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping
     public String saveNewFilm(FilmForm filmForm) {
-        return null;
+        filmService.saveFilm(filmForm);
+        return "redirect:/films";
     }
 
     @GetMapping("/films")

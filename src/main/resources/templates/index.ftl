@@ -1,5 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Регистрация</title>
@@ -16,7 +14,7 @@
         </lable>
         <input type="submit" value="Регистрация" class="btn">
     </form>
-    <div class="button"><a href="signin.jsp">Войти</a></div>
+    <div class="button"><a href="signin.ftl">Войти</a></div>
 </div>
 
 <script>

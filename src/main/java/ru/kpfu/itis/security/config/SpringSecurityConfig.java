@@ -16,6 +16,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import ru.kpfu.itis.filters.CheckParReviewFilter;
+import ru.kpfu.itis.filters.CheckParametersFilter;
+import ru.kpfu.itis.filters.XssFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -26,10 +29,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
   private final UserDetailsService userDetailsService;
   private final DataSource dataSource;
   private final PasswordEncoder passwordEncoder;
+  // filters
+  private final XssFilter xssFilter;
+  private final CheckParReviewFilter reviewFilter;
+  private final CheckParametersFilter parametersFilter;
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     http
+        .addFilter(xssFilter)
+        .addFilter(reviewFilter)
+        .addFilter(parametersFilter)
         .authorizeRequests()
         .and()
         .formLogin()

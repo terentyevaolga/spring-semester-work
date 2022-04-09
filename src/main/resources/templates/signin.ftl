@@ -1,5 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Вход</title>
@@ -34,7 +32,7 @@
         <label> Remember me:</label> <input type="checkbox" name="remember" value="1"
         <%="1".equals(remember) ? "checked='/checked'" : "" %> >
     </div>
-    <div class="button"><a href="signin.jsp">Перейти к регистрации</a></div>
+    <div class="button"><a href="signin.ftl">Перейти к регистрации</a></div>
 </div>
 
 <script>

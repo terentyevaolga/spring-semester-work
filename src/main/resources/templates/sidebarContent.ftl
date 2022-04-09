@@ -1,10 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <link rel="stylesheet" href="css/style.css"/>
-    <title>SidebarContent</title>
-</head>
-<body>
 <div class="sidebar_container">
 
 <%--    <div class="sidebar">--%>
@@ -23,13 +16,8 @@
 
 
     <div class="sidebar">
-        <h2>Рейтинг фильмов</h2>
+        <h2>Рейтинг редакции</h2>
         <ul>
-<%--            <li><a href="showInterstellar.jsp">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>--%>
-<%--            <li><a href="showMatrix.jsp">Матрица</a><span class="rating_sidebar">8.0</span></li>--%>
-<%--            <li><a href="showMax.jsp">Безумный макс</a><span class="rating_sidebar">7.5</span></li>--%>
-<%--            <li><a href="showCloud.jsp">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>--%>
-
             <li>Интерстеллар<span class="rating_sidebar">8.1</span></li>
             <li>Матрица<span class="rating_sidebar">8.0</span></li>
             <li>Безумный Макс<span class="rating_sidebar">7.5</span></li>
@@ -38,5 +26,3 @@
     </div>
 
 </div>
-</body>
-</html>

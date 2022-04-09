@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 public class EntityMapper {
 
   /*
-    Dto class должен иметь конструктор без аргументов
+    Dto class должен иметь конструктор без аргументов, а так же геттеры и сеттеры
    */
   public static <T> T map(Object model, Class<T> dtoClass) {
     Field[] modelFields = model.getClass().getDeclaredFields();
@@ -14,7 +14,6 @@ public class EntityMapper {
     try {
       dto = dtoClass.getConstructor().newInstance();
       for (Field field : modelFields) {
-        field.setAccessible(true);
         Field dtoField;
         try {
           dtoField = dtoClass.getDeclaredField(field.getName());
