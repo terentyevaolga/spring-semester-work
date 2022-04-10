@@ -5,7 +5,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 import lombok.*;
-import sun.security.mscapi.CPublicKey;
 
 @Data
 @Builder

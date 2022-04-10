@@ -22,8 +22,8 @@ public class FilmServiceImpl implements FilmService {
   private final FileHelper fileHelper;
 
   @Override
-  public Film findFilm(Integer id) {
-    return filmsRepository.findById(id).orElseThrow(() -> new RuntimeException("Can't find film with this id"));
+  public Film findFilm(String name) {
+    return filmsRepository.findByName(name).orElseThrow(() -> new RuntimeException("Can't find film with this id"));
   }
 
   @Override

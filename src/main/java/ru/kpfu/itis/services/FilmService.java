@@ -8,7 +8,7 @@ import ru.kpfu.itis.models.FilmReview;
 
 public interface FilmService {
 
-  Film findFilm(Integer id);
+  Film findFilm(String name);
 
   List<FilmReview> getReviews(Film film);
 

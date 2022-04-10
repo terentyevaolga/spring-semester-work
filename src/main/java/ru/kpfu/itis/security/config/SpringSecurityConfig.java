@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -37,9 +38,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     http
-        .addFilter(xssFilter)
-        .addFilter(reviewFilter)
-        .addFilter(parametersFilter)
+        .addFilterBefore(xssFilter, UsernamePasswordAuthenticationFilter.class)
+        .addFilterBefore(reviewFilter, UsernamePasswordAuthenticationFilter.class)
+        .addFilterBefore(parametersFilter, UsernamePasswordAuthenticationFilter.class)
         .authorizeRequests()
         .and()
         .formLogin()
