@@ -7,6 +7,7 @@ ru\kpfu\itis\cotrollers\UserController.class
 ru\kpfu\itis\forms\SendReviewForm.class
 ru\kpfu\itis\filters\CheckParReviewFilter.class
 ru\kpfu\itis\models\Film.class
+ru\kpfu\itis\dto\ErrorDto$ErrorDtoBuilder.class
 ru\kpfu\itis\filters\XssFilter.class
 ru\kpfu\itis\models\User$Role.class
 ru\kpfu\itis\config\ApplicationConfig.class
@@ -18,6 +19,7 @@ ru\kpfu\itis\services\UserServiceImpl.class
 ru\kpfu\itis\services\FilmReviewServiceImpl.class
 ru\kpfu\itis\filters\CheckParametersFilter.class
 ru\kpfu\itis\models\FilmReview$FilmReviewBuilder.class
+ru\kpfu\itis\handlers\RestExceptionHandler.class
 ru\kpfu\itis\dto\MessageDto$MessageDtoBuilder.class
 ru\kpfu\itis\dto\ReviewDto.class
 ru\kpfu\itis\forms\MessageForm.class
@@ -26,6 +28,7 @@ ru\kpfu\itis\models\Message$MessageBuilder.class
 ru\kpfu\itis\models\FilmReview.class
 ru\kpfu\itis\services\ArticlesService.class
 ru\kpfu\itis\cotrollers\SendReviewController.class
+ru\kpfu\itis\dto\ErrorDto.class
 ru\kpfu\itis\forms\FilmForm.class
 ru\kpfu\itis\security\details\UserDetailsServiceImpl.class
 ru\kpfu\itis\models\Article.class
@@ -47,6 +50,7 @@ ru\kpfu\itis\mapper\EntityMapper.class
 ru\kpfu\itis\models\Film$FilmBuilder.class
 ru\kpfu\itis\models\User.class
 ru\kpfu\itis\models\Review.class
+ru\kpfu\itis\handlers\DefaultExceptionHandler.class
 ru\kpfu\itis\services\ReviewServiceImpl.class
 ru\kpfu\itis\services\FilmService.class
 ru\kpfu\itis\services\ReviewService.class
@@ -65,4 +69,5 @@ ru\kpfu\itis\dto\UserDto.class
 ru\kpfu\itis\security\config\SecurityConfigInitializer.class
 ru\kpfu\itis\cotrollers\ArticlesController.class
 ru\kpfu\itis\dto\UserDto$UserDtoBuilder.class
+ru\kpfu\itis\cotrollers\ErrorController.class
 ru\kpfu\itis\config\ChatConfig.class

@@ -14,23 +14,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import ru.kpfu.itis.models.Article;
 import ru.kpfu.itis.services.ArticlesService;
 
-@Controller("/main")
-@AllArgsConstructor
+//@Controller("/main")
+//@AllArgsConstructor
 public class ArticlesController {
-
-    private final ArticlesService articlesService;
-
-    @GetMapping
-    public String getArticles(Model model) {
-        List<Article> articles = articlesService.getAll();
-        model.addAttribute("articles", articles);
-        return "main";
-    }
-
-    @PostMapping
-    public String setArticleToSession(Model model, HttpSession session) {
-        Integer s = Integer.valueOf((String) Objects.requireNonNull(model.getAttribute("article")));
-        session.setAttribute("article", s);
-        return "redirect:/main";
-    }
+//
+//    private final ArticlesService articlesService;
+//
+//    @GetMapping
+//    public String getArticles(Model model) {
+//        List<Article> articles = articlesService.getAll();
+//        model.addAttribute("articles", articles);
+//        return "main";
+//    }
+//
+//    @PostMapping
+//    public String setArticleToSession(Model model, HttpSession session) {
+//        Integer s = Integer.valueOf((String) Objects.requireNonNull(model.getAttribute("article")));
+//        session.setAttribute("article", s);
+//        return "redirect:/main";
+//    }
 }

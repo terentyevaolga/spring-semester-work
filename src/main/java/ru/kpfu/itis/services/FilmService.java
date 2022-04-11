@@ -2,6 +2,7 @@ package ru.kpfu.itis.services;
 
 import java.util.List;
 
+import ru.kpfu.itis.dto.FilmRatingDto;
 import ru.kpfu.itis.forms.FilmForm;
 import ru.kpfu.itis.models.Film;
 import ru.kpfu.itis.models.FilmReview;
@@ -15,6 +16,8 @@ public interface FilmService {
   void saveReviewToFilm(FilmReview filmReview);
 
   List<Film> getAll();
+
+  List<FilmRatingDto> getPageFilmByRating(int page);
 
   void saveFilm(FilmForm filmForm);
 }

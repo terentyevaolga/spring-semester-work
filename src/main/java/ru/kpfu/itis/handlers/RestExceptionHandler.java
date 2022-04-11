@@ -1,5 +1,6 @@
 package ru.kpfu.itis.handlers;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 
@@ -20,7 +21,7 @@ public class RestExceptionHandler {
     log.log(Level.SEVERE, e.getMessage());
     ErrorDto response = ErrorDto.builder()
         .message("Упс.., что то пошло не так")
-        .date(new Date())
+        .date(new SimpleDateFormat("dd.MM.yy HH:mm").format(new Date()))
         .build();
     return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
   }

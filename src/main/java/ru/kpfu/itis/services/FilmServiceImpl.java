@@ -1,10 +1,16 @@
 package ru.kpfu.itis.services;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import ru.kpfu.itis.dto.FilmRatingDto;
 import ru.kpfu.itis.forms.FilmForm;
 import ru.kpfu.itis.helper.FileHelper;
 import ru.kpfu.itis.mapper.EntityMapper;
@@ -23,7 +29,8 @@ public class FilmServiceImpl implements FilmService {
 
   @Override
   public Film findFilm(String name) {
-    return filmsRepository.findByName(name).orElseThrow(() -> new RuntimeException("Can't find film with this id"));
+    return filmsRepository.findByName(name)
+        .orElseThrow(() -> new RuntimeException("Can't find film with this id"));
   }
 
   @Override
@@ -38,6 +45,17 @@ public class FilmServiceImpl implements FilmService {
   @Override
   public List<Film> getAll() {
     return filmsRepository.findAll();
+  }
+
+  @Override
+  public List<FilmRatingDto> getPageFilmByRating(int page) {
+    return filmsRepository.findAll(
+            PageRequest.of(page, 5, Sort.Direction.ASC, "rating"))
+        .stream()
+        .map(film -> EntityMapper.map(film,
+            FilmRatingDto.class
+        ))
+        .collect(Collectors.toList());
   }
 
   @Override

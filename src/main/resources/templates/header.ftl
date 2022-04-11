@@ -14,10 +14,10 @@
 
     <div class="menubar">
         <ul class="menu">
-            <li><a href = "/main">Главная</a></li>
-            <li><a href = "/films">Фильмы</a></li>
-            <li><a href = "rating.ftl">Рейтинг фильмов</a></li>
-            <li><a href = "contact.ftl">Контакты</a></li>
+            <li><a href = "/main">Main</a></li>
+            <li><a href = "/films">Films</a></li>
+            <li><a href = "rating.ftl">Rating of films </a></li>
+            <li><a href = "contact.ftl">Contacts</a></li>
         </ul>
     </div>
 </header>

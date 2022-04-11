@@ -8,7 +8,9 @@
   <title>Error page</title>
 </head>
 <body>
-<h1>Упс...</h1>
-<p>Что то пошло не так, пожалуйста, обратитесь к администрации сайта или попробуйте ещё раз</p>
+<h1>Oops...</h1>
+<h2>Status code: ${errorInfo.status}</h2>
+<p>${errorInfo.message}</p>
+<p>Date: ${errorInfo.date}</p>
 </body>
 </html>
