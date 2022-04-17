@@ -65,7 +65,19 @@ public class DatabaseConfig {
     containerEntityManagerFactoryBean.setDataSource(dataSource());
     containerEntityManagerFactoryBean.setPackagesToScan("ru.kpfu.itis.models");
     containerEntityManagerFactoryBean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
+    containerEntityManagerFactoryBean.setJpaProperties(additionalProperties());
     return containerEntityManagerFactoryBean;
+  }
+
+  private Properties additionalProperties() {
+    Properties properties = new Properties();
+    properties.setProperty("hibernate.hbm2ddl.auto", "update");
+    properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+    properties.setProperty("hibernate.show_sql", "true");
+    properties.setProperty("hibernate.connection.CharSet", "utf8");
+    properties.setProperty("hibernate.connection.characterEncoding", "utf8");
+    properties.setProperty("hibernate.connection.useUnicode","true");
+    return properties;
   }
 
   @Bean

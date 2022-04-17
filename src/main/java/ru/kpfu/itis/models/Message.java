@@ -3,6 +3,7 @@ package ru.kpfu.itis.models;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,12 +16,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 @Entity
+@Table(name = "chat_message")
 public class Message {
 
   @Id
   private Integer id;
   private String text;
-  private String from;
-  private String group;
+  private String writer;
+  private String chatGroup;
   private Date date;
 }

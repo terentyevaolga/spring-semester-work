@@ -1,5 +1,7 @@
 package ru.kpfu.itis.cotrollers;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,10 +16,6 @@ import ru.kpfu.itis.forms.FilmForm;
 import ru.kpfu.itis.models.Film;
 import ru.kpfu.itis.models.FilmReview;
 import ru.kpfu.itis.services.FilmService;
-
-import javax.servlet.http.HttpSession;
-import java.util.List;
-import java.util.Objects;
 
 @Controller
 @AllArgsConstructor
@@ -35,7 +33,6 @@ public class FilmController {
     return "showFilm";
   }
 
-  // TODO: 10.04.2022 сделать через ajax
   @PostMapping("/show_film/{filmName}")
   @PreAuthorize("permitAll()")
   public String saveFilmReview(FilmReview filmReview, @PathVariable("filmName") String filmName) {

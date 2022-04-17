@@ -24,13 +24,13 @@
   }
 
   function connect() {
-    var socket = new SockJS('/gs-guide-websocket');
+    var socket = new SockJS('/ws');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
       setConnected(true);
       console.log('Connected: ' + frame);
-      stompClient.subscribe('/topic/greetings', function (greeting) {
-        showGreeting(JSON.parse(greeting.body).content);
+      stompClient.subscribe('/chat/${group.name}/messages', function (greeting) {
+        showGreeting(JSON.parse(greeting.body));
       });
     });
   }
@@ -43,12 +43,24 @@
     console.log("Disconnected");
   }
 
-  function sendName() {
-    stompClient.send("/app/hello", {}, JSON.stringify({'name': $("#name").val()}));
+  function sendMessage () {
+    let msg = $("#message").val();
+    if (msg.trim() !== "") {
+      const message = {
+        text: msg,
+        from: ${userName}
+        group: ${group.name}
+      };
+      stompClient.send("/app/chat/${group.name}", {}, JSON.stringify(message));
+    }
   }
 
   function showGreeting(message) {
-    $("#greetings").append("<tr><td>" + message + "</td></tr>");
+    $("#greetings").append("<tr>" +
+        "<td>" + message.time + "</td>" +
+        "<td>" + message.from + "</td>" +
+        "<td>" + message.text + "</td>" +
+        "</tr>");
   }
 
   $(function () {
@@ -57,12 +69,20 @@
     });
     $( "#connect" ).click(function() { connect(); });
     $( "#disconnect" ).click(function() { disconnect(); });
-    $( "#send" ).click(function() { sendName(); });
+    $.ajax({
+      url: '/chat/last/${group.name},         /* Куда пойдет запрос */
+      method: 'get',             /* Метод передачи (post или get) */
+      dataType: 'json',          /* Тип данных в ответе (xml, json, script, html). */
+      success: function (data) { /* функция которая будет выполнена после успешного запроса.  */
+        data.forEach(element => {
+          showGreeting(element);
+        })
+        alert(data);
+      }
+    });
+    $( "#send" ).click(function() { sendMessage(); });
   });
 </script>
-<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
-    enabled. Please enable
-    Javascript and reload this page!</h2></noscript>
 <div id="main-content" class="container">
   <div class="row">
     <div class="col-md-6">
@@ -78,8 +98,8 @@
     <div class="col-md-6">
       <form class="form-inline">
         <div class="form-group">
-          <label for="name">What is your name?</label>
-          <input type="text" id="name" class="form-control" placeholder="Your name here...">
+          <label for="name">Start chatting! </label>
+          <input type="text" id="message" class="form-control" placeholder="Message">
         </div>
         <button id="send" class="btn btn-default" type="submit">Send</button>
       </form>

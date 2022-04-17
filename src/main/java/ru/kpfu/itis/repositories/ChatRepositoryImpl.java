@@ -19,13 +19,13 @@ public class ChatRepositoryImpl implements ChatRepository {
     entityManager.getTransaction().begin();
     entityManager.persist(message);
     Message retMessage = entityManager.createQuery(
-            "select m from Message m where m.from = :from and m.date =:date and m.text =:text and m.group = :group",
+            "select m from Message m where m.writer = :from and m.date =:date and m.text =:text and m.chatGroup = :group",
             Message.class
         )
-        .setParameter("from", message.getFrom())
+        .setParameter("from", message.getWriter())
         .setParameter("date", message.getDate())
         .setParameter("text", message.getText())
-        .setParameter("group", message.getGroup())
+        .setParameter("group", message.getChatGroup())
         .getSingleResult();
     entityManager.getTransaction().commit();
     return retMessage;

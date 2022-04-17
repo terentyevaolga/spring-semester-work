@@ -1,8 +1,7 @@
 package ru.kpfu.itis.models;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.*;
 
 import lombok.*;
 
@@ -12,6 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 
 @Entity
+@Table(name="users")
 public class User {
     @Id
     private Long id;
@@ -20,6 +20,8 @@ public class User {
     private String email;
     @Enumerated(EnumType.STRING)
     private Role role;
+    @ManyToMany(mappedBy = "users")
+    private Set<Group> groups = new HashSet<>();
 
     public enum Role {
         ADMIN, USER

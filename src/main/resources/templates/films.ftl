@@ -19,16 +19,17 @@
     <div class="content">
 
         <#list films as film>
-      <div class="info_film">
-        <img src="${film.imageURL}">
-        <td>
-          "${film.description}"
-        </td>
-        <form action="/films" method="post">
-          <button type="submit" class="button" name="film" value="${film.id}">Смотреть</button>
-        </form>
-      </div>
-
+          <div class="info_film">
+            <img src="${film.imageURL}">
+            <td>
+              "${film.description}"
+            </td>
+            <form action="/films" method="post">
+              <button type="submit" class="button" name="film" value="${film.id}">Смотреть</button>
+            </form>
+          </div>
+        </#list>
+    </div>
   </div>
 </div>
 
