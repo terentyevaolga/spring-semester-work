@@ -1,13 +1,11 @@
 package ru.kpfu.itis.repositories;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.kpfu.itis.models.Film;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface FilmsRepository {
-    List<Film> findAll();
-    Film findById(int id);
-    Film save(Film film);
-    void deleteById(int id);
-    Film findByName(String name);
+public interface FilmsRepository extends JpaRepository<Film, Integer> {
+
+  Optional<Film> findByName(String name);
 }

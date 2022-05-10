@@ -1,39 +1,23 @@
 package ru.kpfu.itis.models;
-import lombok.*;
-@Setter
-@Getter
-@EqualsAndHashCode
-@ToString
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Entity
 public class Article {
+    @Id
     private int id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    private Group group;
     private String title;
     private String description;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

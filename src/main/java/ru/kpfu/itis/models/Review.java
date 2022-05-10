@@ -1,39 +1,21 @@
 package ru.kpfu.itis.models;
-import lombok.*;
-@Setter
-@Getter
-@EqualsAndHashCode
-@ToString
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Entity
 public class Review {
+    @Id
     private Long id;
     private String userPhone;
     private String userReviewText;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
-    }
-
-    public String getUserReviewText() {
-        return userReviewText;
-    }
-
-    public void setUserReviewText(String userReviewText) {
-        this.userReviewText = userReviewText;
-    }
 }

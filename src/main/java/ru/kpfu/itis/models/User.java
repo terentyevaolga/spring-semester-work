@@ -1,48 +1,33 @@
 package ru.kpfu.itis.models;
-import lombok.*;
-@Setter
-@Getter
-@EqualsAndHashCode
-@ToString
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 
+@Entity
+@Table(name="users")
 public class User {
+    @Id
     private Long id;
     private String name;
     private String passwordHash;
     private String email;
+    @Enumerated(EnumType.STRING)
+    private Role role;
+    @ManyToMany(mappedBy = "users")
+    private Set<Group> groups = new HashSet<>();
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public enum Role {
+        ADMIN, USER
     }
 }
