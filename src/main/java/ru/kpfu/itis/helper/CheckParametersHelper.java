@@ -21,4 +21,5 @@ public class CheckParametersHelper {
         return comment.length() > 10;
     }
 
+
 }

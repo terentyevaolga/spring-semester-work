@@ -16,4 +16,5 @@ public class UserDto {
   private String passwordHash;
   private String email;
   private User.Role role;
+
 }

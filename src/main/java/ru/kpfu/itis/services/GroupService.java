@@ -15,4 +15,5 @@ public interface GroupService {
   List<MessageDto> getLastMessages(String group);
 
   Group getGroup(String name);
+
 }

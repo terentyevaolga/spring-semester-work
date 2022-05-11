@@ -16,6 +16,7 @@ import java.util.Map;
 @Component
 public class XssFilter extends OncePerRequestFilter {
 
+
   @Override
   protected void doFilterInternal(HttpServletRequest httpServletRequest,
       HttpServletResponse httpServletResponse, FilterChain filterChain)

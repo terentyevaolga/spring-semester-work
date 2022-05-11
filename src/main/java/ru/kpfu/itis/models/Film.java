@@ -14,6 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 public class Film {
+
     @Id
     private int id;
     private String name;

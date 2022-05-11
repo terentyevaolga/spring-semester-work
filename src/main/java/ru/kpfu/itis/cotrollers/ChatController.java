@@ -17,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ChatController {
 
+
   private final SimpMessagingTemplate messagingTemplate;
   private final GroupService groupService;
 

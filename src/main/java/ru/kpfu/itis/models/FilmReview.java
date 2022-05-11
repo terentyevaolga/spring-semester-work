@@ -13,6 +13,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class FilmReview {
+
     @Id
     private int id;
     private String userName;

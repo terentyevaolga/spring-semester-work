@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class EntityMapper {
 
+
   public static <T> T map(Object model, Class<T> dtoClass) {
     Field[] modelFields = model.getClass().getDeclaredFields();
     T dto;

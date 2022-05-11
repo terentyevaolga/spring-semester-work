@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface FilmsRepository extends JpaRepository<Film, Integer> {
 
   Optional<Film> findByName(String name);
+
 }

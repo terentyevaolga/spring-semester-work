@@ -8,4 +8,5 @@ public interface GroupRepository extends JpaRepository<Group, Integer> {
 
   @EntityGraph(attributePaths = {"users"})
   Group findGroupByName(String name);
+
 }

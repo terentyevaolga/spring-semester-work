@@ -24,6 +24,7 @@ import java.util.Properties;
 @EnableJpaRepositories("ru.kpfu.itis.repositories")
 public class DatabaseConfig {
 
+
   @Autowired
   private final Environment environment;
 

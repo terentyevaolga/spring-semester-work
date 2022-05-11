@@ -50,4 +50,5 @@ public class GroupServiceImpl implements GroupService {
   public Group getGroup(String name) {
     return groupRepository.findGroupByName(name);
   }
+
 }

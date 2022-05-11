@@ -20,5 +20,6 @@ public class ReviewServiceImpl implements ReviewService {
     Review retReview =  reviewRepository.save(review);
     return EntityMapper.map(retReview, ReviewDto.class);
   }
+
 }
 

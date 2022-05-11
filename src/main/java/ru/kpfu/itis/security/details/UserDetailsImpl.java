@@ -12,6 +12,7 @@ import java.util.Collections;
 @AllArgsConstructor
 public class UserDetailsImpl implements UserDetails {
 
+
   private final User user;
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {

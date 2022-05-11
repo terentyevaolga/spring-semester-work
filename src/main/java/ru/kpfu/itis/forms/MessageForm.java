@@ -13,4 +13,5 @@ public class MessageForm {
 
   private String from;
   private String text;
+
 }

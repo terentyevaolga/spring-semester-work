@@ -19,6 +19,7 @@ import java.util.logging.Level;
 @Log
 public class DefaultExceptionHandler {
 
+
   @ExceptionHandler({Throwable.class})
   public String handleMyException(Throwable ex, HttpServletRequest request, Model model, HttpServletResponse response) {
     ErrorDto errorDto = new ErrorDto();

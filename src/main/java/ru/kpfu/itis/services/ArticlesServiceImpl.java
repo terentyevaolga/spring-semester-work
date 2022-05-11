@@ -39,4 +39,5 @@ public class ArticlesServiceImpl implements ArticlesService {
         .collect(
             Collectors.toList());
   }
+
 }

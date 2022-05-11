@@ -19,6 +19,7 @@ import java.util.Date;
 @Table(name = "chat_message")
 public class Message {
 
+
   @Id
   private Integer id;
   private String text;

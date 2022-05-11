@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SendReviewForm {
+
     private String userPhone;
     private String userReviewText;
+
 }
