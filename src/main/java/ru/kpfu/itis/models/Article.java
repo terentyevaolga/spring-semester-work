@@ -20,4 +20,5 @@ public class Article {
     private Group group;
     private String title;
     private String description;
+
 }

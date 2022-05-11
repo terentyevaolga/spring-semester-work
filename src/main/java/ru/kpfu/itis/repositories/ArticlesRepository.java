@@ -16,4 +16,5 @@ public interface ArticlesRepository extends JpaRepository<Article, Integer> {
               + " gu where gu.user_id = (select us.name from users us where name = :name))",
       nativeQuery = true)
   List<Article> findArticleByUser(@Param("name") String name);
+
 }

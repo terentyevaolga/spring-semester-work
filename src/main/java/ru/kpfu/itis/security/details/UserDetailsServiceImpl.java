@@ -13,6 +13,7 @@ import ru.kpfu.itis.repositories.UsersRepository;
 @AllArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+
   private final UsersRepository usersRepository;
 
   @Override

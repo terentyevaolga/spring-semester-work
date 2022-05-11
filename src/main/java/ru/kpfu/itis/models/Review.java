@@ -14,6 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 public class Review {
+
     @Id
     private Long id;
     private String userPhone;

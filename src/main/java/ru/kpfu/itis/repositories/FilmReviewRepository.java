@@ -10,4 +10,5 @@ import java.util.List;
 public interface FilmReviewRepository extends JpaRepository<FilmReview, Integer> {
 
   List<FilmReview> findByFilm(Film film);
+
 }

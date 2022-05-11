@@ -6,4 +6,5 @@ import ru.kpfu.itis.forms.SendReviewForm;
 public interface ReviewService {
 
   public ReviewDto sendReview(SendReviewForm sendReviewForm);
+
 }

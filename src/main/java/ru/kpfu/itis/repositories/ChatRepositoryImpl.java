@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ChatRepositoryImpl implements ChatRepository {
 
+
   private final EntityManager entityManager;
 
   @Override

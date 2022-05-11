@@ -9,4 +9,5 @@ public interface ArticlesService {
   List<ArticleDto> getAll();
 
   List<ArticleDto> getAllArticlesByAuthor(String groupName);
+
 }

@@ -27,6 +27,7 @@ import javax.sql.DataSource;
 @AllArgsConstructor
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
+
   private final UserDetailsService userDetailsService;
   private final DataSource dataSource;
   private final PasswordEncoder passwordEncoder;

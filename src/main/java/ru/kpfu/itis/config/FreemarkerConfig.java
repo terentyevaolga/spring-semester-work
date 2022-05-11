@@ -11,6 +11,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 @Configuration
 public class FreemarkerConfig {
 
+
   @Bean
   public FreeMarkerViewResolver freemarkerViewResolver() {
     FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();

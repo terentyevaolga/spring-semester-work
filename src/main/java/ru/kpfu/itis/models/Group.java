@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Group {
 
+
   @Id
   private int id;
   private String name;

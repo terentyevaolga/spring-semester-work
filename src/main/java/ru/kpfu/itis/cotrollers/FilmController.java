@@ -23,6 +23,7 @@ public class FilmController {
 
   private final FilmService filmService;
 
+
   @GetMapping("/show_film/{filmName}")
   @PreAuthorize("permitAll()")
   public String getFilms(@PathVariable("filmName") String filmName, Model model) {

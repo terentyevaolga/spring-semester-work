@@ -14,6 +14,7 @@ import java.io.IOException;
 @Component
 public class CheckParametersFilter implements Filter {
 
+
     private final RequestMatcher signupRequest = new AntPathRequestMatcher("/signup", "POST");
 
     @Override

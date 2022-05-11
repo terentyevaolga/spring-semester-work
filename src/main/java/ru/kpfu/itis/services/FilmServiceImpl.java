@@ -64,4 +64,5 @@ public class FilmServiceImpl implements FilmService {
     film.setImage(avatar);
     filmsRepository.save(film);
   }
+
 }

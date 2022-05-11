@@ -12,6 +12,7 @@ public class FileHelper {
   private final String sharingPath;
   private final Path location;
 
+
   public FileHelper(String sharingPath, Path location) {
     this.sharingPath = sharingPath;
     if (!Files.exists(location)) {

@@ -28,6 +28,7 @@ public class ApplicationConfig extends WebMvcConfigurationSupport {
         .addResourceLocations("file://" + Paths.get(fileLocation) + "/");
   }
 
+
   @Bean
   public FileHelper fileHelper() {
     return new FileHelper(fileSharing, Paths.get(fileLocation));

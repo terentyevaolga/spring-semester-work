@@ -9,4 +9,5 @@ public interface ChatRepository {
 
   Message save(Message message);
   List<Message> getLastMessages(String group, Integer limit);
+
 }
