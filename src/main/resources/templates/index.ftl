@@ -6,15 +6,16 @@
 <body>
 <div class="form-style-5">
     <h2>КиноМонстр</h2>
-    <form class="signup-form" method="post" action="/signup">
+    <form class="signup-form" method="POST" action="/signup">
         <input class="input input-field name" type="text" id="name" name="name" placeholder="Логин">
         <input class="input input-field email" type="email" id="email" name="email" placeholder="Email">
         <lable><p>Длина пароля от 4 до 12 символов, обязательны одна заглавная буква и цифра</p>
             <input class="input input-field password" type="password" id="password" name="password" placeholder="Введите пароль">
         </lable>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <input type="submit" value="Регистрация" class="btn">
     </form>
-    <div class="button"><a href="signin.ftl">Войти</a></div>
+    <div class="button"><a href="/signin">Войти</a></div>
 </div>
 
 <script>

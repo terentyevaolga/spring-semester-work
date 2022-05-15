@@ -28,15 +28,15 @@ public class CheckParametersFilter implements Filter {
 
             if (!CheckParametersHelper.checkName(name)) {
                 servletRequest.setAttribute("error", "Name format is incorrect");
-                resp.sendRedirect("signup.jsp");
+                resp.sendRedirect("signup");
             }
             else if (!CheckParametersHelper.checkEmail(email)) {
                 servletRequest.setAttribute("error", "Email format is incorrect");
-                resp.sendRedirect("signup.jsp");
+                resp.sendRedirect("signup");
             }
             else if (!CheckParametersHelper.checkPassword(password)) {
                 servletRequest.setAttribute("error", "Password format is incorrect");
-                resp.sendRedirect("signup.jsp");
+                resp.sendRedirect("signup");
             }
             else {
                 filterChain.doFilter(req, resp);

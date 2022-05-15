@@ -30,7 +30,7 @@ public class UserController {
     @PreAuthorize("permitAll()")
     public String saveUser(SignUpForm signUpForm)  {
         usersService.signup(signUpForm);
-        return "redirect:/main";
+        return "redirect:/signin";
     }
 
     @GetMapping("/signin")

@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.kpfu.itis.dto.ArticleDto;
 import ru.kpfu.itis.services.ArticlesService;
 
-@RestController("/articles")
+@RestController()
 @AllArgsConstructor
 public class ArticlesController {
 
     private final ArticlesService articlesService;
 
-    @GetMapping
+    @GetMapping("/articles")
     public ResponseEntity<List<ArticleDto>> getArticles() {
         List<ArticleDto> articles = articlesService.getAll();
         return ResponseEntity.ok(articles);
     }
 
-    @GetMapping("/{author}")
+    @GetMapping("/articles/{author}")
     public ResponseEntity<List<ArticleDto>> getArticlesByAuthor(@PathVariable("author") String author) {
         List<ArticleDto> articles = articlesService.getAllArticlesByAuthor(author);
         return ResponseEntity.ok(articles);

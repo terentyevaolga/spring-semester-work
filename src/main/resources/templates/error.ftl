@@ -9,8 +9,8 @@
 </head>
 <body>
 <h1>Oops...</h1>
-<h2>Status code: ${errorInfo.status}</h2>
-<p>${errorInfo.message}</p>
-<p>Date: ${errorInfo.date}</p>
+<h2>Status code: ${status}</h2>
+<p>${message}</p>
+<p>Date: ${date}</p>
 </body>
 </html>
