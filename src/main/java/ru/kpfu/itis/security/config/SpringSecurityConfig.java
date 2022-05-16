@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
@@ -27,51 +28,51 @@ import ru.kpfu.itis.filters.XssFilter;
 @AllArgsConstructor
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
-  private final UserDetailsService userDetailsService;
-  private final DataSource dataSource;
-  private final PasswordEncoder passwordEncoder;
-  // filters
-  private final XssFilter xssFilter;
-  private final CheckParReviewFilter reviewFilter;
-  private final CheckParametersFilter parametersFilter;
+    private final UserDetailsService userDetailsService;
+    private final DataSource dataSource;
+    private final PasswordEncoder passwordEncoder;
+    // filters
+//  private final XssFilter xssFilter;
+    private final CheckParReviewFilter reviewFilter;
+    private final CheckParametersFilter parametersFilter;
 
-  @Override
-  protected void configure(HttpSecurity http) throws Exception {
-    http
-        .addFilterBefore(xssFilter, UsernamePasswordAuthenticationFilter.class)
-        .addFilterBefore(reviewFilter, UsernamePasswordAuthenticationFilter.class)
-        .addFilterBefore(parametersFilter, UsernamePasswordAuthenticationFilter.class)
-        .authorizeRequests()
-        .and()
-        .formLogin()
-        .loginPage("/signin").permitAll()
-        .usernameParameter("name")
-        .defaultSuccessUrl("/main")
-        .failureUrl("/signIn?error")
-        .and()
-        .logout()
-        .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "POST"))
-        .logoutSuccessUrl("/signin")
-        .clearAuthentication(true)
-        .invalidateHttpSession(true)
-        .deleteCookies("JSESSIONID")
-        .and()
-        .rememberMe()
-        .rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository());
-  }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .authorizeRequests()
+                .antMatchers("/signup").permitAll()
+//                .antMatchers("/main").authenticated()
+                .and()
+//                .formLogin()
+//                .loginPage("/signIn")
+//                .successHandler(successfulAuthenticationHandler)
+//                .failureUrl("/signIn?problem")
+//                .failureHandler(failHandler)
+//                .permitAll()
+//                .and()
+                .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "POST"))
+                .logoutSuccessUrl("/signIn")
+                .clearAuthentication(true)
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
+                .and()
+                .rememberMe()
+                .rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository());
+    }
 
-  @Override
-  protected void configure(AuthenticationManagerBuilder auth) {
-    DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-    daoAuthenticationProvider.setPasswordEncoder(passwordEncoder);
-    daoAuthenticationProvider.setUserDetailsService(userDetailsService);
-    auth.authenticationProvider(daoAuthenticationProvider);
-  }
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) {
+        DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
+        daoAuthenticationProvider.setPasswordEncoder(passwordEncoder);
+        daoAuthenticationProvider.setUserDetailsService(userDetailsService);
+        auth.authenticationProvider(daoAuthenticationProvider);
+    }
 
-  @Bean
-  public PersistentTokenRepository persistentTokenRepository() {
-    JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
-    jdbcTokenRepository.setDataSource(dataSource);
-    return jdbcTokenRepository;
-  }
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository() {
+        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
+        jdbcTokenRepository.setDataSource(dataSource);
+        return jdbcTokenRepository;
+    }
 }

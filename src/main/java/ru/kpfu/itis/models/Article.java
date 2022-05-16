@@ -7,12 +7,20 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name="articles")
 public class Article {
     @Id
+    @Column(name = "article_id")
     private int id;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn
+    @ManyToOne()
+    @JoinTable(
+            name = "article_group",
+            joinColumns = @JoinColumn(name = "article_id"),
+            inverseJoinColumns = @JoinColumn(name = "group_id")
+    )
     private Group group;
+    @Column(name="title")
     private String title;
+    @Column(name="description")
     private String description;
 }

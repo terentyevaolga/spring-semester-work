@@ -17,6 +17,6 @@ public class FilmForm {
   private String rating;
   private String year;
   private String director;
-  private MultipartFile icon;
   private String description;
+  private MultipartFile icon;
 }

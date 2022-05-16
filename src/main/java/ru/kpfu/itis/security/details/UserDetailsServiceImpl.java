@@ -13,10 +13,12 @@ import ru.kpfu.itis.repositories.UsersRepository;
 @AllArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+  // интерфейс UserDetailsService нужен для того, чтобы spring security мог получить пользователя
+
   private final UsersRepository usersRepository;
 
   @Override
   public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-    return new UserDetailsImpl(usersRepository.findByName(s).orElseThrow(() -> new RuntimeException("can't find user")));
+    return new UserDetailsImpl(usersRepository.findByName(s).orElseThrow(() -> new RuntimeException("User not found")));
   }
 }

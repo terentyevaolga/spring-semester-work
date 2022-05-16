@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import ru.kpfu.itis.dto.UserDto;
 import ru.kpfu.itis.forms.SignInForm;
 import ru.kpfu.itis.forms.SignUpForm;
@@ -21,27 +23,23 @@ public class UserController {
     private final UserService usersService;
 
     @GetMapping("/signup")
-    @PreAuthorize("permitAll()")
     public String getSignUpPage()  {
         return "index";
     }
 
     @PostMapping("/signup")
-    @PreAuthorize("permitAll()")
     public String saveUser(SignUpForm signUpForm)  {
         usersService.signup(signUpForm);
         return "redirect:/main";
     }
 
-    @GetMapping("/signin")
-    @PreAuthorize("permitAll()")
+    @RequestMapping(method = RequestMethod.GET, value = "/signIn")
     public String getSignInPage() {
         return "signin";
     }
 
-    @PostMapping("/signin")
-    @PreAuthorize("permitAll()")
-    protected String signIn(SignInForm signInForm, HttpServletResponse resp, Model model) {
+    @RequestMapping(method = RequestMethod.POST, value = "/signIn")
+    protected String signIn(SignInForm signInForm, Model model) {
         Optional<UserDto> userDto = usersService.signin(signInForm);
         if (userDto.isPresent()) {
             return "redirect:/main";

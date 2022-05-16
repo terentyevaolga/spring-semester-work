@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="community")
+@Table(name="groups")
 @Data
 @Builder
 @AllArgsConstructor
@@ -17,14 +17,17 @@ import lombok.NoArgsConstructor;
 public class Group {
 
   @Id
+  @Column(name = "group_id")
   private int id;
+  @Column(name = "name")
   private String name;
+  @Column(name = "description")
   private String description;
   @OneToMany()
   private List<Article> articles;
   @ManyToMany(cascade = { CascadeType.ALL })
   @JoinTable(
-      name = "Group_User",
+      name = "user_group",
       joinColumns = { @JoinColumn(name = "group_id") },
       inverseJoinColumns = { @JoinColumn(name = "user_id") }
   )
