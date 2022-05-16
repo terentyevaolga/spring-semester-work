@@ -22,8 +22,8 @@ public class XssFilter extends OncePerRequestFilter {
       throws ServletException, IOException {
     Map<String, String[]> parameters = httpServletRequest.getParameterMap();
     for (Map.Entry<String, String[]> entry: parameters.entrySet()) {
-      List<String> array = new ArrayList<>(entry.getValue().length);
       for (String value: entry.getValue()) {
+        String initValue = value;
         if (value == null) {
           continue;
         }
@@ -31,9 +31,8 @@ public class XssFilter extends OncePerRequestFilter {
         value = StringEscapeUtils.escapeJava(value);
         value = StringEscapeUtils.escapeHtml4(value);
         value = StringEscapeUtils.escapeEcmaScript(value);
-        array.add(value);
+        if (!initValue.equals(value)) return;
       }
-      parameters.put(entry.getKey(), array.toArray(String[]::new));
     }
     filterChain.doFilter(httpServletRequest, httpServletResponse);
   }

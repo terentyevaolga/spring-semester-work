@@ -30,7 +30,7 @@ public class UserController {
     @PostMapping("/signup")
     public String saveUser(SignUpForm signUpForm)  {
         usersService.signup(signUpForm);
-        return "redirect:/main";
+        return "redirect:/signin";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/signIn")
